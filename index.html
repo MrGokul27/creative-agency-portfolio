@@ -1,0 +1,1495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stackly - Creative Agency Portfolio & Digital Studio</title>
+    <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp" />
+
+    <!-- Google Fonts (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6.6.0 (Latest Icons including X-Twitter) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- COMMON HEADER COMPONENT CONTAINER -->
+    <div id="header-placeholder"></div>
+
+    <!-- SECTION 1: HERO SHOWCASE  -->
+    <section
+      class="bg-theme-charcoal position-relative overflow-hidden hero-section"
+      style="padding: 220px 0 140px"
+    >
+      <!-- Ambient Glow Elements -->
+      <div
+        class="position-absolute top-0 end-0 w-50 h-50"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(255, 153, 0, 0.12) 0%,
+            rgba(0, 0, 0, 0) 70%
+          );
+          pointer-events: none;
+        "
+      ></div>
+      <div
+        class="position-absolute bottom-0 start-0 w-50 h-50"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(255, 195, 48, 0.08) 0%,
+            rgba(0, 0, 0, 0) 70%
+          );
+          pointer-events: none;
+        "
+      ></div>
+
+      <div class="container position-relative z-2">
+        <div class="row align-items-center">
+          <div class="col-lg-10 mx-auto text-center">
+            <div
+              class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4"
+              style="
+                background: rgba(255, 255, 255, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+              "
+            >
+              <span
+                class="badge bg-theme-primary text-black fw-bold text-uppercase"
+                >New 2026</span
+              >
+              <span class="text-white-50 small fw-medium"
+                >Global Creative & Digital Excellence Agency</span
+              >
+            </div>
+
+            <h1
+              class="display-1 fw-bolder text-white text-uppercase mb-4"
+              style="letter-spacing: -0.03em; line-height: 1.05"
+            >
+              Design <span class="text-theme-primary">Driven</span> Impact
+              <br />
+              <span
+                style="
+                  font-weight: 300;
+                  font-style: italic;
+                  color: var(--color-vivid-yellow);
+                "
+                >Agency</span
+              >
+            </h1>
+
+            <p
+              class="lead text-white-50 mx-auto mb-5"
+              style="max-width: 720px; font-size: 1.25rem"
+            >
+              We sculpt breakthrough brand identities, hyper-intuitive digital
+              architectures, and award-winning web platforms that transform
+              ambitious brands into category leaders.
+            </p>
+
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+              <a href="#" class="btn-creative btn-creative-primary">
+                <span>Explore Showcase</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#" class="btn-creative btn-creative-outline">
+                <span>Book Consultation</span>
+                <i class="fa-regular fa-calendar-check"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Video Reel Trigger Box -->
+        <div class="row mt-4">
+          <div class="col-lg-9 mx-auto">
+            <div
+              class="position-relative rounded-4 overflow-hidden border border-white border-opacity-10 shadow-lg"
+              style="aspect-ratio: 21/9; background: #181818"
+            >
+              <img
+                src="./assets/images/home/home-hero-video-reel-image.webp"
+                alt="Creative Studio Collaboration"
+                class="w-100 h-100 object-fit-cover"
+                style="opacity: 0.65"
+              />
+
+              <div
+                class="position-absolute top-50 start-50 translate-middle text-center"
+              >
+                <button
+                  type="button"
+                  class="btn btn-warning rounded-circle p-4 text-black shadow-lg video-play-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal"
+                  data-video="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
+                  aria-label="Play Agency Showreel"
+                  style="
+                    width: 80px;
+                    height: 80px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--color-primary);
+                    border-color: var(--color-primary);
+                    transition: transform 0.3s ease;
+                  "
+                >
+                  <i class="fa-solid fa-play fa-xl ms-1"></i>
+                </button>
+                <p
+                  class="text-white mt-3 fw-bold small text-uppercase letter-spacing-1"
+                >
+                  Watch 2026 Agency Showreel
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INFINITE MARQUEE TICKER (SKILLS & CAPABILITIES) -->
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        <span class="marquee-item"
+          ><i class="fa-solid fa-sparkles"></i> Brand Strategy & Identity</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-circle"></i> Digital Product Architecture</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-bolt"></i> High-End Web Development</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-cube"></i> 3D Motion & Visual Effects</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-chart-line"></i> Performance Marketing</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-layer-group"></i> Scalable Design Systems</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-sparkles"></i> Brand Strategy & Identity</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-circle"></i> Digital Product Architecture</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-bolt"></i> High-End Web Development</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-cube"></i> 3D Motion & Visual Effects</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-chart-line"></i> Performance Marketing</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-layer-group"></i> Scalable Design Systems</span
+        >
+      </div>
+    </div>
+
+    <!-- SECTION 3: ABOUT AGENCY (MANIFESTO & PROVEN IMPACT) -->
+    <section
+      class="py-5"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-tag">About Stackly Studio</span>
+            <h2 class="section-title">
+              Where Bold Imagination Meets
+              <span class="text-theme-secondary">Precision Strategy</span>.
+            </h2>
+            <p class="section-subtitle">
+              We don't settle for the conventional. We partner with fearless
+              founders and global enterprises to craft timeless identities,
+              unforgettable digital experiences, and scalable web solutions that
+              build authentic market dominance.
+            </p>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="rounded-circle p-2 bg-warning bg-opacity-25 text-warning d-flex align-items-center justify-content-center"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    color: var(--color-secondary) !important;
+                  "
+                >
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <span class="fw-semibold text-dark"
+                  >Proprietary 4-Phase Discovery & Execution Framework</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="rounded-circle p-2 bg-warning bg-opacity-25 text-warning d-flex align-items-center justify-content-center"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    color: var(--color-secondary) !important;
+                  "
+                >
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <span class="fw-semibold text-dark"
+                  >Cross-functional team of top 1% designers & creative
+                  technologists</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="rounded-circle p-2 bg-warning bg-opacity-25 text-warning d-flex align-items-center justify-content-center"
+                  style="
+                    width: 38px;
+                    height: 38px;
+                    color: var(--color-secondary) !important;
+                  "
+                >
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <span class="fw-semibold text-dark"
+                  >Obsessive focus on conversion ergonomics and brand
+                  memorability</span
+                >
+              </div>
+            </div>
+
+            <a href="#" class="btn-creative btn-creative-dark">
+              <span>Read Our Story</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <div
+                class="rounded-4 overflow-hidden shadow-lg border border-black border-opacity-10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
+                  alt="Creative Agency Team Collaborating"
+                  class="w-100 object-fit-cover"
+                  style="height: 480px"
+                />
+              </div>
+
+              <!-- Floating Stat Badge -->
+              <div
+                class="position-absolute bottom-0 start-0 translate-middle-y ms-4 p-4 rounded-4 shadow-lg text-white"
+                style="
+                  background: var(--color-dark-charcoal);
+                  border: 2px solid var(--color-primary);
+                  max-width: 240px;
+                "
+              >
+                <h3
+                  class="fw-bolder mb-0 text-theme-primary"
+                  style="font-size: 2.8rem"
+                >
+                  12+
+                </h3>
+                <p class="small text-white-50 mb-0 fw-semibold text-uppercase">
+                  Years of Global Design Impact & Excellence
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WORKSPACE & STUDIO CULTURE (INTERACTIVE GALLERY) -->
+    <section
+      class="bg-theme-secondary py-5"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-8">
+            <span class="section-tag">Inside The Studio</span>
+            <h2 class="section-title">
+              Where Ideas Take Shape & Culture Thrives.
+            </h2>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <p class="text-muted mb-0">
+              Step inside our collaborative workspaces across London and
+              worldwide creative hubs.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="studio-gallery-img shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=700&auto=format&fit=crop"
+                alt="Design Lab Studio"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="studio-gallery-img shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=700&auto=format&fit=crop"
+                alt="Product Architecture Sprints"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="studio-gallery-img shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=700&auto=format&fit=crop"
+                alt="Strategy Roundtables"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="studio-gallery-img shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=700&auto=format&fit=crop"
+                alt="Creative Coding Sessions"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CORE SERVICES & CAPABILITIES (HOVER INTERACTIVE LIST) -->
+    <section
+      class="bg-theme-charcoal py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7">
+            <span class="section-tag light">Our Capabilities</span>
+            <h2 class="section-title light">
+              Engineered for Exponential Brand Growth.
+            </h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="section-subtitle light mb-0">
+              From fundamental brand identity to bespoke digital platforms, we
+              provide end-to-end creative solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Rows Grid -->
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card dark-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-bezier-curve"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Brand Identity & Positioning</h4>
+              <p class="text-white-50 mb-4">
+                We formulate charismatic brand voices, bespoke visual systems,
+                logo design, style guides, and emotional positioning.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="#"
+                  class="text-theme-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2"
+                >
+                  <span>Explore Branding</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card dark-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Custom Web Engineering</h4>
+              <p class="text-white-50 mb-4">
+                Ultra-fast, responsive web experiences built with modern
+                architecture, GSAP micro-interactions, and robust headless CMS.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="#"
+                  class="text-theme-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2"
+                >
+                  <span>Explore Web Dev</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card dark-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h4 class="fw-bold mb-3">UI/UX Product Architecture</h4>
+              <p class="text-white-50 mb-4">
+                Data-informed UX design, interactive prototypes, customer
+                journeys, and scalable design systems built in Figma.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="#"
+                  class="text-theme-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2"
+                >
+                  <span>Explore UI/UX</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card dark-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <h4 class="fw-bold mb-3">3D Motion & Visual Graphics</h4>
+              <p class="text-white-50 mb-4">
+                Immersive 3D product visualizations, WebGL assets, kinetic
+                typography, and scroll-triggered animations.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="#"
+                  class="text-theme-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2"
+                >
+                  <span>Explore 3D Motion</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card dark-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+              <h4 class="fw-bold mb-3">E-Commerce Experience</h4>
+              <p class="text-white-50 mb-4">
+                Custom Shopify Plus & Headless commerce architectures engineered
+                for frictionless checkout and high average order value.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="#"
+                  class="text-theme-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2"
+                >
+                  <span>Explore E-Commerce</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card dark-card">
+              <div class="card-icon-box">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Digital Growth & Strategy</h4>
+              <p class="text-white-50 mb-4">
+                SEO domination, conversion rate optimization (CRO), marketing
+                analytics, and high-impact digital launch campaigns.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="#"
+                  class="text-theme-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2"
+                >
+                  <span>Explore Growth</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FEATURED PORTFOLIO / SELECTED PROJECTS -->
+    <section
+      class="py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7">
+            <span class="section-tag">Curated Showcase</span>
+            <h2 class="section-title">
+              Selected Works Crafted with Passion & Precision.
+            </h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <a href="#" class="btn-creative btn-creative-dark">
+              <span>View All Projects (18+)</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-lg-6">
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                  alt="Fintech Web Platform Dashboard"
+                />
+                <span class="portfolio-badge">Fintech SaaS</span>
+                <div class="portfolio-overlay">
+                  <h3 class="portfolio-title">
+                    Aetherium Capital - NextGen Wealth Platform
+                  </h3>
+                  <p class="text-white-50 small mb-0">
+                    Brand Identity, Web Application & Interactive Design System
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-lg-6">
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop"
+                  alt="Luxury Fashion Brand Identity"
+                />
+                <span class="portfolio-badge">Luxury & Fashion</span>
+                <div class="portfolio-overlay">
+                  <h3 class="portfolio-title">
+                    Maison Vesper - Haute Couture Digital Experience
+                  </h3>
+                  <p class="text-white-50 small mb-0">
+                    Art Direction, E-Commerce & Kinetic Web Experience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-lg-6">
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1526738549149-8e07eca6c147?q=80&w=1000&auto=format&fit=crop"
+                  alt="Audio Hardware 3D Motion"
+                />
+                <span class="portfolio-badge">Hardware & 3D</span>
+                <div class="portfolio-overlay">
+                  <h3 class="portfolio-title">
+                    Sonora Spatial - High-Fidelity Audio Launch
+                  </h3>
+                  <p class="text-white-50 small mb-0">
+                    3D Product Rendering, WebGL Showcase & Campaign Design
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-lg-6">
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000&auto=format&fit=crop"
+                  alt="Organic Sustainable Beverage Packaging"
+                />
+                <span class="portfolio-badge">Branding & Packaging</span>
+                <div class="portfolio-overlay">
+                  <h3 class="portfolio-title">
+                    Botanica Elixirs - Sustainable Brand System
+                  </h3>
+                  <p class="text-white-50 small mb-0">
+                    Eco Packaging, Typography System & Global Visual Identity
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: BRAND TRUST & CLIENT LOGO CLOUD -->
+    <section class="bg-theme-secondary py-5">
+      <div class="container text-center">
+        <p
+          class="text-uppercase fw-bold letter-spacing-2 small text-muted mb-4"
+        >
+          Trusted by Pioneering Startups & Fortune 500 Innovators
+        </p>
+        <div
+          class="row justify-content-center align-items-center g-4 opacity-75"
+        >
+          <div class="col-4 col-md-2">
+            <h4 class="fw-bolder text-dark mb-0">
+              <i class="fa-brands fa-spotify me-1"></i> Spotify
+            </h4>
+          </div>
+          <div class="col-4 col-md-2">
+            <h4 class="fw-bolder text-dark mb-0">
+              <i class="fa-brands fa-stripe me-1"></i> Stripe
+            </h4>
+          </div>
+          <div class="col-4 col-md-2">
+            <h4 class="fw-bolder text-dark mb-0">
+              <i class="fa-brands fa-airbnb me-1"></i> Airbnb
+            </h4>
+          </div>
+          <div class="col-4 col-md-2">
+            <h4 class="fw-bolder text-dark mb-0">
+              <i class="fa-brands fa-shopify me-1"></i> Shopify
+            </h4>
+          </div>
+          <div class="col-4 col-md-2">
+            <h4 class="fw-bolder text-dark mb-0">
+              <i class="fa-brands fa-figma me-1"></i> Figma
+            </h4>
+          </div>
+          <div class="col-4 col-md-2">
+            <h4 class="fw-bolder text-dark mb-0">
+              <i class="fa-brands fa-hubspot me-1"></i> HubSpot
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: WHY CHOOSE STACKLY (VALUE PROPOSITION) -->
+    <section
+      class="py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="row align-items-center g-5 mb-5">
+          <div class="col-lg-5">
+            <div
+              class="bg-theme-charcoal text-white p-5 rounded-4 shadow-lg position-relative overflow-hidden"
+            >
+              <div class="position-absolute top-0 end-0 p-4 opacity-10">
+                <i class="fa-solid fa-award fa-5x"></i>
+              </div>
+              <h1 class="display-2 fw-bolder text-theme-primary mb-2">99.4%</h1>
+              <h4 class="fw-bold mb-3">Client Satisfaction & Retention Rate</h4>
+              <p class="text-white-50 mb-0">
+                Over 350+ delivered projects across 24 countries with zero
+                missed deadlines and measurable revenue growth for our partners.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <span class="section-tag">Why Partner With Us</span>
+            <h2 class="section-title">
+              Strategic Clarity, Artistic Depth & Flawless Engineering.
+            </h2>
+            <p class="section-subtitle mb-0">
+              We bridge the gap between creative artistry and commercial
+              performance, delivering measurable business outcomes through
+              high-level design.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="creative-card">
+              <span class="card-step-num">01.</span>
+              <h4 class="fw-bold mb-3">Creative Excellence</h4>
+              <p class="text-muted">
+                We refuse cookie-cutter templates. Every typography choice,
+                micro-interaction, and layout hierarchy is engineered bespoke to
+                your brand identity.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="creative-card">
+              <span class="card-step-num">02.</span>
+              <h4 class="fw-bold mb-3">Strategy-Driven UX</h4>
+              <p class="text-muted">
+                Our creative explorations are rooted in deep user research,
+                competitive landscape audits, and conversion psychology for
+                maximum ROI.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="creative-card">
+              <span class="card-step-num">03.</span>
+              <h4 class="fw-bold mb-3">Collaborative Partnership</h4>
+              <p class="text-muted">
+                We embed directly with your leadership team as an agile
+                extension, providing transparent communication, live Figma
+                updates, and rapid iterations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: INTERACTIVE AGENCY REEL / VIDEO BANNER -->
+    <section
+      class="position-relative py-5 text-white"
+      style="
+        background: url(&quot;https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop&quot;)
+          center/cover no-repeat fixed;
+        min-height: 480px;
+        display: flex;
+        align-items: center;
+      "
+    >
+      <div
+        class="position-absolute inset-0 w-100 h-100"
+        style="background: rgba(16, 16, 16, 0.82)"
+      ></div>
+      <div class="container position-relative z-2 text-center py-5">
+        <span class="section-tag light mb-3">Agency Showreel</span>
+        <h2
+          class="display-4 fw-bolder text-white mb-4"
+          style="max-width: 800px; margin: 0 auto"
+        >
+          Crafting Digital Experiences That Leave A Lasting Legacy
+        </h2>
+        <div class="my-4">
+          <button
+            type="button"
+            class="btn btn-warning rounded-circle p-4 text-black shadow-lg video-play-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#videoModal"
+            data-video="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
+            aria-label="Play Video Reel"
+            style="
+              width: 90px;
+              height: 90px;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              background-color: var(--color-primary);
+              border-color: var(--color-primary);
+            "
+          >
+            <i class="fa-solid fa-play fa-2xl ms-1"></i>
+          </button>
+        </div>
+        <p class="text-white-50 fw-semibold text-uppercase small">
+          Click to experience our interactive reel
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 10: DESIGN PROCESS & METHODOLOGY (4 STEPS) -->
+    <section
+      class="bg-theme-secondary py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Our Methodology</span>
+          <h2 class="section-title">The 4-Step Creative Lifecycle</h2>
+          <p class="section-subtitle mx-auto">
+            A proven agile roadmap ensuring seamless delivery from initial
+            concept to high-impact launch.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="creative-card text-center">
+              <div class="card-icon-box mx-auto">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <span
+                class="badge bg-theme-primary text-black fw-bold px-3 py-2 rounded-pill mb-3"
+                >Phase 01</span
+              >
+              <h4 class="fw-bold mb-2">Discover & Audit</h4>
+              <p class="text-muted small mb-0">
+                We conduct comprehensive brand interviews, competitor auditing,
+                user persona research, and core goal definition.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="creative-card text-center">
+              <div class="card-icon-box mx-auto">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <span
+                class="badge bg-theme-primary text-black fw-bold px-3 py-2 rounded-pill mb-3"
+                >Phase 02</span
+              >
+              <h4 class="fw-bold mb-2">Design & Prototype</h4>
+              <p class="text-muted small mb-0">
+                We explore moodboards, visual style directions, interactive
+                wireframes, and high-fidelity Figma components.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="creative-card text-center">
+              <div class="card-icon-box mx-auto">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span
+                class="badge bg-theme-primary text-black fw-bold px-3 py-2 rounded-pill mb-3"
+                >Phase 03</span
+              >
+              <h4 class="fw-bold mb-2">Build & Elevate</h4>
+              <p class="text-muted small mb-0">
+                Clean code execution with semantic HTML5, modern CSS, GSAP
+                interactions, and rigorous quality assurance.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="creative-card text-center">
+              <div class="card-icon-box mx-auto">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <span
+                class="badge bg-theme-primary text-black fw-bold px-3 py-2 rounded-pill mb-3"
+                >Phase 04</span
+              >
+              <h4 class="fw-bold mb-2">Scale & Impact</h4>
+              <p class="text-muted small mb-0">
+                Global deployment, speed optimization, technical SEO
+                verification, post-launch analytics, and growth iteration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: CREATIVE MINDS / TEAM HIGHLIGHT -->
+    <section
+      class="py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7">
+            <span class="section-tag">The Talent Behind The Work</span>
+            <h2 class="section-title">Meet Our Key Creative Directors.</h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <a href="#" class="btn-creative btn-creative-dark">
+              <span>Meet All Team Members</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Team Member 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-member-card">
+              <div class="team-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
+                  alt="Elena Rostova - Executive Creative Director"
+                />
+                <div class="team-social-overlay">
+                  <a href="#" aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" aria-label="X Twitter"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="#" aria-label="Dribbble"
+                    ><i class="fa-brands fa-dribbble"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-info-box">
+                <h4 class="team-name">Elena Rostova</h4>
+                <p class="team-role">Executive Creative Director</p>
+                <p class="small text-muted mb-0">
+                  Leading global brand strategy & experiential art direction for
+                  over a decade.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-member-card">
+              <div class="team-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                  alt="Marcus Vance - Head of Digital Architecture"
+                />
+                <div class="team-social-overlay">
+                  <a href="#" aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" aria-label="X Twitter"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="#" aria-label="GitHub"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-info-box">
+                <h4 class="team-name">Marcus Vance</h4>
+                <p class="team-role">Head of Digital Architecture</p>
+                <p class="small text-muted mb-0">
+                  Specializing in high-performance WebGL, Next.js, and
+                  interactive front-end systems.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="team-member-card">
+              <div class="team-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                  alt="Sophia Chen - Lead Product & UX Designer"
+                />
+                <div class="team-social-overlay">
+                  <a href="#" aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="#" aria-label="X Twitter"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="#" aria-label="Behance"
+                    ><i class="fa-brands fa-behance"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="team-info-box">
+                <h4 class="team-name">Sophia Chen</h4>
+                <p class="team-role">Lead Product & UX Designer</p>
+                <p class="small text-muted mb-0">
+                  Crafting intuitive SaaS design architectures and seamless
+                  mobile user journeys.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: CLIENT TESTIMONIALS (AUTHENTIC CLIENT REVIEWS) -->
+    <section
+      class="bg-theme-secondary py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Client Feedback</span>
+          <h2 class="section-title">Words from Our Visionary Partners</h2>
+          <p class="section-subtitle mx-auto">
+            Hear how our strategic creativity transformed the market positioning
+            and growth trajectory of our clients.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="creative-card h-100 p-4">
+              <div class="d-flex text-warning mb-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="fst-italic text-dark mb-4">
+                "Stackly completely reimagined our digital presence. Within
+                three months of the new brand and web platform launch, our
+                inbound enterprise inquiries increased by 210%."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+                  alt="Jonathan Reed"
+                  class="rounded-circle object-fit-cover"
+                  style="width: 50px; height: 50px"
+                />
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">Jonathan Reed</h6>
+                  <p class="small text-muted mb-0">
+                    Chief Marketing Officer, Aetherium
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="creative-card h-100 p-4">
+              <div class="d-flex text-warning mb-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="fst-italic text-dark mb-4">
+                "The caliber of design and attention to subtle
+                micro-interactions was world-class. Working with Stackly felt
+                like having the world's most elite internal design team."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop"
+                  alt="Claire Dupont"
+                  class="rounded-circle object-fit-cover"
+                  style="width: 50px; height: 50px"
+                />
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">Claire Dupont</h6>
+                  <p class="small text-muted mb-0">
+                    Founder & CEO, Maison Vesper
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="creative-card h-100 p-4">
+              <div class="d-flex text-warning mb-3">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="fst-italic text-dark mb-4">
+                "Their strategy-first approach set a new benchmark for us. The
+                website speed, aesthetic elegance, and flawless mobile
+                responsiveness exceeded all expectations."
+              </p>
+              <div class="d-flex align-items-center gap-3 mt-auto">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
+                  alt="David Sterling"
+                  class="rounded-circle object-fit-cover"
+                  style="width: 50px; height: 50px"
+                />
+                <div>
+                  <h6 class="fw-bold mb-0 text-dark">David Sterling</h6>
+                  <p class="small text-muted mb-0">
+                    VP Product, Sonora Spatial
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 13: PRICING & ENGAGEMENT MODELS -->
+    <section
+      class="py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Transparent Engagement</span>
+          <h2 class="section-title">Flexible Models Built for Scale</h2>
+          <p class="section-subtitle mx-auto">
+            Choose a collaboration model tailored to your organization's stage,
+            scope, and technical ambitions.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Plan 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card p-5">
+              <h4 class="fw-bold mb-2">Sprint Launchpad</h4>
+              <p class="text-muted small mb-4">
+                Ideal for early-stage startups and rapid product MVPs.
+              </p>
+              <h2 class="fw-bolder text-dark mb-4">
+                $4,900<span class="fs-6 text-muted fw-normal"> / project</span>
+              </h2>
+              <ul class="list-unstyled mb-5 d-flex flex-column gap-3">
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i>
+                  Comprehensive Brand Styleguide
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i> Custom
+                  5-Page Responsive Web
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i> Mobile
+                  Ergonomics Optimization
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i> 2-Week
+                  Rapid Delivery
+                </li>
+              </ul>
+              <div class="mt-auto">
+                <a href="#" class="btn-creative btn-creative-outline-dark w-100"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan 2 (Featured) -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="creative-card dark-card p-5 position-relative shadow-lg border-warning"
+              style="border-width: 2px"
+            >
+              <span
+                class="badge bg-theme-primary text-black fw-bold text-uppercase position-absolute top-0 end-0 m-4"
+                >Most Popular</span
+              >
+              <h4 class="fw-bold mb-2">Growth Retainer</h4>
+              <p class="text-white-50 small mb-4">
+                Dedicated creative squad for scaling scale-ups & market leaders.
+              </p>
+              <h2 class="fw-bolder text-theme-primary mb-4">
+                $8,500<span class="fs-6 text-white-50 fw-normal"> / month</span>
+              </h2>
+              <ul class="list-unstyled mb-5 d-flex flex-column gap-3">
+                <li>
+                  <i class="fa-solid fa-check text-theme-primary me-2"></i> Full
+                  Dedicated Senior Design Squad
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-theme-primary me-2"></i>
+                  Custom Interactive Web & 3D Assets
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-theme-primary me-2"></i>
+                  Weekly Sprints & Daily Slack Sync
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-theme-primary me-2"></i>
+                  Unlimited Design & Front-End Iterations
+                </li>
+              </ul>
+              <div class="mt-auto">
+                <a href="#" class="btn-creative btn-creative-primary w-100"
+                  >Reserve Retainer</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="creative-card p-5">
+              <h4 class="fw-bold mb-2">Enterprise Vanguard</h4>
+              <p class="text-muted small mb-4">
+                Custom bespoke digital transformation for global enterprises.
+              </p>
+              <h2 class="fw-bolder text-dark mb-4">
+                $18,000+<span class="fs-6 text-muted fw-normal"> / custom</span>
+              </h2>
+              <ul class="list-unstyled mb-5 d-flex flex-column gap-3">
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i> Full
+                  Rebranding & Design System
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i> Headless
+                  E-Commerce / Custom SaaS
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i> Dedicated
+                  Tech Lead & QA Engineers
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-warning me-2"></i> 24/7 SLA
+                  Support & SLA Governance
+                </li>
+              </ul>
+              <div class="mt-auto">
+                <a href="#" class="btn-creative btn-creative-outline-dark w-100"
+                  >Request Custom Scope</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 14: LATEST INSIGHTS & ARTICLES (BLOG) -->
+    <section
+      class="bg-theme-charcoal py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7">
+            <span class="section-tag light">Thought Leadership</span>
+            <h2 class="section-title light">
+              Insights, Trends & Design Engineering.
+            </h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <a href="#" class="btn-creative btn-creative-outline">
+              <span>Explore All Articles</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Article 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-grid-card">
+              <div class="blog-grid-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=800&auto=format&fit=crop"
+                  alt="Design Trends 2026"
+                />
+              </div>
+              <div class="blog-grid-body">
+                <span class="blog-date-badge"
+                  ><i class="fa-regular fa-clock"></i> March 18, 2026 • 6 min
+                  read</span
+                >
+                <h4 class="blog-grid-title">
+                  The Evolution of Spatial UI: How Micro-Interactions Drive
+                  Conversion
+                </h4>
+                <p class="text-muted small mb-3">
+                  Explore how subtle motion physics and haptic visual feedback
+                  enhance user trust in web applications.
+                </p>
+                <div class="blog-author-meta">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop"
+                    alt="Elena Rostova"
+                    class="blog-author-avatar"
+                  />
+                  <div>
+                    <h6 class="mb-0 fw-bold small text-dark">Elena Rostova</h6>
+                    <span class="text-muted" style="font-size: 0.75rem"
+                      >Creative Director</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-grid-card">
+              <div class="blog-grid-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+                  alt="Web Architecture & NextGen Code"
+                />
+              </div>
+              <div class="blog-grid-body">
+                <span class="blog-date-badge"
+                  ><i class="fa-regular fa-clock"></i> March 12, 2026 • 8 min
+                  read</span
+                >
+                <h4 class="blog-grid-title">
+                  Engineering Ultra-Fast Web Experiences with Headless CMS &
+                  Three.js
+                </h4>
+                <p class="text-muted small mb-3">
+                  A deep dive into optimizing heavy 3D rendering pipelines
+                  without sacrificing core web vitals and mobile performance.
+                </p>
+                <div class="blog-author-meta">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                    alt="Marcus Vance"
+                    class="blog-author-avatar"
+                  />
+                  <div>
+                    <h6 class="mb-0 fw-bold small text-dark">Marcus Vance</h6>
+                    <span class="text-muted" style="font-size: 0.75rem"
+                      >Head of Technology</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-grid-card">
+              <div class="blog-grid-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop"
+                  alt="Brand Strategy Manifesto"
+                />
+              </div>
+              <div class="blog-grid-body">
+                <span class="blog-date-badge"
+                  ><i class="fa-regular fa-clock"></i> March 04, 2026 • 5 min
+                  read</span
+                >
+                <h4 class="blog-grid-title">
+                  Beyond The Logo: Crafting Monolithic Brand Identity Systems
+                </h4>
+                <p class="text-muted small mb-3">
+                  Why modern tech unicorns require adaptive design languages
+                  that thrive across digital, physical, and virtual touchpoints.
+                </p>
+                <div class="blog-author-meta">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+                    alt="Sophia Chen"
+                    class="blog-author-avatar"
+                  />
+                  <div>
+                    <h6 class="mb-0 fw-bold small text-dark">Sophia Chen</h6>
+                    <span class="text-muted" style="font-size: 0.75rem"
+                      >Lead UX Architect</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 15: START YOUR PROJECT / FINAL INQUIRY CALLOUT -->
+    <section
+      class="py-5"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div
+          class="bg-theme-charcoal rounded-5 p-5 p-lg-5 text-white position-relative overflow-hidden border border-white border-opacity-10 shadow-lg"
+        >
+          <div class="row align-items-center position-relative z-2 g-4">
+            <div class="col-lg-8">
+              <span
+                class="badge bg-theme-primary text-black fw-bold text-uppercase px-3 py-2 rounded-pill mb-3"
+                >Let's Build Something Iconic</span
+              >
+              <h2 class="display-5 fw-bolder mb-3">
+                Ready to Turn Your Vision into Market Dominance?
+              </h2>
+              <p class="text-white-50 lead mb-0">
+                Our creative directors are available for exploratory discovery
+                calls this week. Let's discuss your roadmap.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#" class="btn-creative btn-creative-primary">
+                <span>Start Project Inquiry</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMON FOOTER COMPONENT CONTAINER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Video Modal -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark border-0">
+          <div class="modal-header border-0 pb-0">
+            <button
+              type="button"
+              class="btn-close btn-close-white ms-auto"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="videoFrame"
+                src=""
+                title="Agency Video Reel"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5.3.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Interactive Script with Component Loader -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

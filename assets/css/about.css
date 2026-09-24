@@ -1,0 +1,148 @@
+/* Mission Manifesto Box */
+.manifesto-box {
+  background: #ffffff;
+  border-radius: var(--border-radius-lg);
+  padding: 60px 50px;
+  box-shadow: var(--shadow-soft);
+  border-left: 5px solid var(--color-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto-quote-icon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 6rem;
+  color: rgba(255, 153, 0, 0.08);
+  pointer-events: none;
+}
+
+/* Stats Counter Grid */
+.stat-counter-box {
+  background: var(--color-dark-charcoal);
+  border-radius: var(--border-radius-md);
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.stat-counter-box:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 153, 0, 0.15);
+}
+
+.stat-number-large {
+  font-size: clamp(2.5rem, 2rem + 2vw, 3.8rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+  font-family: var(--font-main);
+}
+
+/* Timeline Roadmaps */
+.timeline-track {
+  position: relative;
+  padding-left: 35px;
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary),
+    var(--color-secondary),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.timeline-step:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -35px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px var(--color-primary);
+}
+
+.timeline-card {
+  background: #ffffff;
+  padding: 28px 30px;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition-fast);
+}
+
+.timeline-card:hover {
+  border-color: var(--color-primary);
+  transform: translateX(8px);
+}
+
+/* Awards Badge List */
+.award-strip-item {
+  background: #ffffff;
+  border-radius: var(--border-radius-sm);
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: var(--transition-fast);
+}
+
+.award-strip-item:hover {
+  background: var(--color-dark-charcoal);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  transform: scale(1.02);
+}
+
+.award-strip-item:hover .award-year {
+  color: var(--color-vivid-yellow);
+}
+
+.award-year {
+  font-weight: 800;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+/* Studio Gallery Grid */
+.studio-gallery-img {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  height: 280px;
+  position: relative;
+}
+
+.studio-gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.studio-gallery-img:hover img {
+  transform: scale(1.08);
+}

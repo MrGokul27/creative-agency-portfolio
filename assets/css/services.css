@@ -1,0 +1,140 @@
+/* Service Detail Pillar Card */
+.service-pillar-card {
+  background: #ffffff;
+  border-radius: var(--border-radius-lg);
+  padding: 45px 40px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  transition: var(--transition-smooth);
+}
+
+.service-pillar-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-orange));
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.service-pillar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 153, 0, 0.3);
+}
+
+.service-pillar-card:hover::after {
+  opacity: 1;
+}
+
+.service-deliverable-tag {
+  display: inline-block;
+  background: var(--bg-secondary);
+  color: var(--color-dark-charcoal);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-right: 6px;
+  margin-bottom: 8px;
+  transition: var(--transition-fast);
+}
+
+.service-pillar-card:hover .service-deliverable-tag {
+  background: rgba(255, 153, 0, 0.15);
+  color: var(--color-secondary);
+}
+
+/* Service Matrix Tabs */
+.matrix-nav-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.matrix-nav-btn {
+  padding: 14px 28px;
+  border-radius: var(--border-radius-pill);
+  background: #ffffff;
+  color: var(--color-dark-charcoal);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.matrix-nav-btn.active,
+.matrix-nav-btn:hover {
+  background: var(--color-primary);
+  color: #000000;
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.3);
+}
+
+/* Tech Tooling Grid */
+.tooling-icon-box {
+  background: #ffffff;
+  border-radius: var(--border-radius-md);
+  padding: 25px 20px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-fast);
+}
+
+.tooling-icon-box:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary);
+  box-shadow: 0 15px 30px rgba(255, 153, 0, 0.15);
+}
+
+.tooling-icon-box i {
+  font-size: 2.5rem;
+  color: var(--color-dark-charcoal);
+  margin-bottom: 12px;
+  transition: var(--transition-fast);
+}
+
+.tooling-icon-box:hover i {
+  color: var(--color-primary);
+}
+
+/* Custom Accordion Styling for FAQ */
+.custom-faq-accordion .accordion-item {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px !important;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.custom-faq-accordion .accordion-button {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-dark-charcoal);
+  background: #ffffff;
+  padding: 22px 28px;
+  box-shadow: none !important;
+}
+
+.custom-faq-accordion .accordion-button:not(.collapsed) {
+  color: var(--color-secondary);
+  background: var(--bg-secondary);
+}
+
+.custom-faq-accordion .accordion-body {
+  padding: 20px 28px 26px;
+  color: var(--color-dark-gray);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

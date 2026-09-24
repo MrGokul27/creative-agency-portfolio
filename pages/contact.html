@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Stackly Creative Agency Portfolio</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
+
+    <!-- Google Fonts (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6.6.0 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet & Page Specific CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/contact.css" />
+  </head>
+  <body>
+    <!-- COMMON HEADER COMPONENT CONTAINER -->
+    <div id="header-placeholder"></div>
+
+    <!-- SECTION 1: PAGE BANNER & BREADCRUMBS -->
+    <section class="page-banner-section text-center">
+      <div class="container position-relative z-2">
+        <div class="banner-breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>Contact Us</span>
+        </div>
+        <h1 class="banner-title">
+          Let’s Create Something <span class="text-theme-primary">Iconic</span>
+        </h1>
+        <p class="banner-desc">
+          Have a new project, brand transformation, or custom digital product in
+          mind? Reach out to our London studio. We review all inquiries within
+          24 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CONTACT INFO CARDS GRID (4 CARDS) -->
+    <section
+      class="py-5"
+      style="padding-top: 90px !important; padding-bottom: 80px !important"
+    >
+      <div class="container">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-info-card">
+              <div class="contact-icon-large">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h5 class="fw-bold mb-2">UK Headquarters</h5>
+              <p class="text-muted small mb-0">
+                24 St James's Square, St. James's, London SW1Y 4JH, UK
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-info-card">
+              <div class="contact-icon-large">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Direct Phone</h5>
+              <p class="mb-0">
+                <a href="#" class="text-dark fw-bold text-decoration-none"
+                  >+91 9876543210</a
+                >
+              </p>
+              <p class="text-muted small mb-0">Mon - Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-info-card">
+              <div class="contact-icon-large">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Project Inquiries</h5>
+              <p class="mb-0">
+                <a href="#" class="text-dark fw-bold text-decoration-none"
+                  >hello@stacklycreative.com</a
+                >
+              </p>
+              <p class="text-muted small mb-0">Response within 24 hours</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-info-card">
+              <div class="contact-icon-large">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Working Hours</h5>
+              <p class="text-dark fw-bold mb-0">Monday – Friday</p>
+              <p class="text-muted small mb-0">08:30 AM – 10:45 PM GMT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INTERACTIVE PROJECT INQUIRY FORM & BUDGET SELECTOR -->
+    <section
+      class="bg-theme-secondary py-5"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="contact-main-form-box">
+              <div class="text-center mb-5">
+                <span class="section-tag">Project Inquiry</span>
+                <h2 class="section-title">Tell Us About Your Vision</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px">
+                  Fill in the details below and our Creative Director will
+                  prepare a customized proposal with estimated timelines and
+                  budget scope.
+                </p>
+              </div>
+
+              <form
+                id="projectInquiryForm"
+                onsubmit="
+                  event.preventDefault();
+                  alert(
+                    'Thank you for reaching out! We will review your inquiry and get back to you within 24 hours.',
+                  );
+                "
+              >
+                <!-- Step 1: Services Interested -->
+                <div class="mb-4">
+                  <label class="fw-bold mb-3 d-block"
+                    >1. Which services are you interested in?</label
+                  >
+                  <div class="d-flex flex-wrap">
+                    <input
+                      type="checkbox"
+                      id="srv_brand"
+                      class="service-select-checkbox"
+                      checked
+                    />
+                    <label for="srv_brand" class="service-select-label"
+                      >Brand Strategy & Identity</label
+                    >
+
+                    <input
+                      type="checkbox"
+                      id="srv_web"
+                      class="service-select-checkbox"
+                      checked
+                    />
+                    <label for="srv_web" class="service-select-label"
+                      >Custom Web Development</label
+                    >
+
+                    <input
+                      type="checkbox"
+                      id="srv_uiux"
+                      class="service-select-checkbox"
+                    />
+                    <label for="srv_uiux" class="service-select-label"
+                      >UI/UX Architecture</label
+                    >
+
+                    <input
+                      type="checkbox"
+                      id="srv_3d"
+                      class="service-select-checkbox"
+                    />
+                    <label for="srv_3d" class="service-select-label"
+                      >3D Motion & WebGL</label
+                    >
+
+                    <input
+                      type="checkbox"
+                      id="srv_ecom"
+                      class="service-select-checkbox"
+                    />
+                    <label for="srv_ecom" class="service-select-label"
+                      >Shopify & E-Commerce</label
+                    >
+
+                    <input
+                      type="checkbox"
+                      id="srv_retainer"
+                      class="service-select-checkbox"
+                    />
+                    <label for="srv_retainer" class="service-select-label"
+                      >Monthly Dedicated Retainer</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Step 2: Contact Info -->
+                <div class="row g-4 mb-4">
+                  <div class="col-md-6">
+                    <label class="fw-bold mb-2 small text-uppercase"
+                      >Your Full Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control-custom"
+                      placeholder="e.g. Alexander Wright"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="fw-bold mb-2 small text-uppercase"
+                      >Work Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control-custom"
+                      placeholder="alexander@company.com"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="fw-bold mb-2 small text-uppercase"
+                      >Phone Number (Optional)</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control-custom"
+                      placeholder="+91 9876543210"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="fw-bold mb-2 small text-uppercase"
+                      >Company / Project Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control-custom"
+                      placeholder="e.g. Acme Corp"
+                    />
+                  </div>
+                </div>
+
+                <!-- Step 3: Project Budget -->
+                <div class="mb-4">
+                  <label class="fw-bold mb-2 small text-uppercase"
+                    >Estimated Project Budget (USD)</label
+                  >
+                  <select class="form-control-custom" style="cursor: pointer">
+                    <option value="5k-10k">
+                      $5,000 – $10,000 (Sprint Launchpad)
+                    </option>
+                    <option value="10k-25k" selected>
+                      $10,000 – $25,000 (Standard Full Scope)
+                    </option>
+                    <option value="25k-50k">
+                      $25,000 – $50,000 (Complex Architecture / WebGL)
+                    </option>
+                    <option value="50k+">
+                      $50,000+ (Enterprise Transformation)
+                    </option>
+                  </select>
+                </div>
+
+                <!-- Step 4: Message -->
+                <div class="mb-5">
+                  <label class="fw-bold mb-2 small text-uppercase"
+                    >Project Overview & Goals *</label
+                  >
+                  <textarea
+                    class="form-control-custom"
+                    rows="5"
+                    placeholder="Tell us about your brand challenge, target audience, preferred launch deadline, and any reference websites..."
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="btn-creative btn-creative-dark py-3 px-5"
+                  >
+                    <span>Submit Project Inquiry</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                  <p class="small text-muted mt-3 mb-0">
+                    <i class="fa-solid fa-lock me-1"></i> We respect your
+                    privacy. Standard mutual NDA applied upon request.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: GOOGLE MAP EMBED / LOCATION REPRESENTATION -->
+    <section
+      class="py-5"
+      style="padding-top: 90px !important; padding-bottom: 90px !important"
+    >
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <span class="section-tag">Find Our Studio</span>
+            <h2 class="section-title">Located in the Heart of London</h2>
+            <p class="section-subtitle">
+              Our flagship studio is situated in St James's Square, London,
+              welcoming clients for in-person creative reviews and discovery
+              workshops.
+            </p>
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-center gap-3">
+                <i
+                  class="fa-solid fa-train text-warning fa-lg"
+                  style="color: var(--color-primary) !important"
+                ></i>
+                <span
+                  >5 mins walk from Piccadilly Circus & Green Park
+                  Stations</span
+                >
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <i
+                  class="fa-solid fa-mug-hot text-warning fa-lg"
+                  style="color: var(--color-primary) !important"
+                ></i>
+                <span>On-site Espresso Bar & Private Presentation Suite</span>
+              </div>
+            </div>
+            <a href="#" class="btn-creative btn-creative-outline-dark">
+              <span>Open In Google Maps</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="map-visual-container">
+              <!-- Embedded Google Map representation -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.3328574347784!2d-0.1384074233792011!3d51.50714771072972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d49a464a9d%3A0xe5a3c9b986bbfda!2sSt%20James&#39;s%20Square%2C%20London%20SW1Y%204JH%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="London Headquarters Map"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: DIRECT DISCOVERY CALL BOOKING -->
+    <section
+      class="bg-theme-charcoal py-5 text-white"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container text-center">
+        <div class="mx-auto" style="max-width: 720px">
+          <span class="section-tag light mb-2">Fast Track</span>
+          <h2 class="section-title light">Prefer an Immediate Video Call?</h2>
+          <p class="text-white-50 lead mb-4">
+            Book a 30-minute direct discovery video session with our Executive
+            Creative Director to review your brand requirements in real time.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#" class="btn-creative btn-creative-primary">
+              <i class="fa-solid fa-phone"></i>
+              <span>Call +91 9876543210</span>
+            </a>
+            <a href="#" class="btn-creative btn-creative-outline">
+              <i class="fa-solid fa-calendar"></i>
+              <span>Schedule on Google Meet</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GLOBAL BRANCHES & HUBS -->
+    <section
+      class="bg-theme-secondary py-5"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Global Presence</span>
+          <h2 class="section-title">International Creative Hubs</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="branch-card">
+              <h4 class="fw-bold mb-2">London (HQ)</h4>
+              <p class="text-muted small mb-3">
+                24 St James's Square, London SW1Y 4JH
+              </p>
+              <span class="badge bg-theme-primary text-black fw-bold"
+                >Primary Studio</span
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="branch-card">
+              <h4 class="fw-bold mb-2">Manchester</h4>
+              <p class="text-muted small mb-3">
+                100 King Street, Manchester M2 4WU
+              </p>
+              <span class="badge bg-dark text-white fw-bold"
+                >Engineering Lab</span
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="branch-card">
+              <h4 class="fw-bold mb-2">New York</h4>
+              <p class="text-muted small mb-3">
+                575 5th Ave, New York, NY 10017
+              </p>
+              <span class="badge bg-dark text-white fw-bold"
+                >Client Relations</span
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="branch-card">
+              <h4 class="fw-bold mb-2">Singapore</h4>
+              <p class="text-muted small mb-3">
+                1 Raffles Place, Singapore 048616
+              </p>
+              <span class="badge bg-dark text-white fw-bold">APAC Hub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: ONBOARDING FAQ ACCORDION -->
+    <section
+      class="py-5"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Onboarding Process</span>
+          <h2 class="section-title">Client Inquiry FAQ</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion custom-faq-accordion" id="contactFaq">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="cfaqOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cCollapseOne"
+                    aria-expanded="true"
+                  >
+                    How quickly will you respond to our initial inquiry?
+                  </button>
+                </h2>
+                <div
+                  id="cCollapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#contactFaq"
+                >
+                  <div class="accordion-body">
+                    Our executive team reviews every form submission and
+                    responds within 24 business hours with initial feedback and
+                    proposed discovery call slots.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="cfaqTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cCollapseTwo"
+                  >
+                    What information should we prepare before our discovery
+                    call?
+                  </button>
+                </h2>
+                <div
+                  id="cCollapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#contactFaq"
+                >
+                  <div class="accordion-body">
+                    A brief overview of your business goals, target launch
+                    timeline, approximate budget parameters, and links to any
+                    competitor benchmarks you admire will help us maximize the
+                    productivity of our first meeting.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="cfaqThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cCollapseThree"
+                  >
+                    Can we execute a Non-Disclosure Agreement (NDA) first?
+                  </button>
+                </h2>
+                <div
+                  id="cCollapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#contactFaq"
+                >
+                  <div class="accordion-body">
+                    Absolutely. We regularly sign mutual NDAs before diving into
+                    proprietary product concepts or unannounced brand
+                    strategies.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: 3-STEP RESPONSE PROTOCOL GUARANTEE -->
+    <section
+      class="bg-theme-secondary py-5"
+      style="padding-top: 90px !important; padding-bottom: 90px !important"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Our Response Guarantee</span>
+          <h2 class="section-title">What Happens After You Contact Us</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="creative-card text-center p-4">
+              <span class="card-step-num">01</span>
+              <h5 class="fw-bold mb-2">Prompt Review (24h)</h5>
+              <p class="text-muted small mb-0">
+                Our creative directors evaluate your brief, assess team
+                availability, and send an introductory response.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="creative-card text-center p-4">
+              <span class="card-step-num">02</span>
+              <h5 class="fw-bold mb-2">30-Min Discovery Call</h5>
+              <p class="text-muted small mb-0">
+                We dive deep into your project goals, technical requirements,
+                and strategic positioning opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="creative-card text-center p-4">
+              <span class="card-step-num">03</span>
+              <h5 class="fw-bold mb-2">Custom Proposal & Roadmap</h5>
+              <p class="text-muted small mb-0">
+                You receive a transparent statement of work with exact
+                deliverables, timeline milestones, and fixed pricing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: INSTANT CHAT & DIRECT WHATSAPP CTA -->
+    <section class="py-5 bg-white text-center">
+      <div class="container py-3">
+        <div
+          class="bg-theme-charcoal text-white rounded-5 p-5 position-relative overflow-hidden border border-white border-opacity-10 shadow-lg"
+        >
+          <span
+            class="badge bg-theme-primary text-black fw-bold text-uppercase px-3 py-2 rounded-pill mb-3"
+            >Need Instant Help?</span
+          >
+          <h2 class="display-5 fw-bolder mb-3">
+            Speak Directly With Our Studio Coordinator
+          </h2>
+          <p class="text-white-50 lead mx-auto mb-4" style="max-width: 650px">
+            Give us a call directly at <strong>+91 9876543210</strong> or email
+            <strong>hello@stacklycreative.com</strong> for expedited responses.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#" class="btn-creative btn-creative-primary">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 9876543210</span>
+            </a>
+            <a href="#" class="btn-creative btn-creative-outline">
+              <i class="fa-solid fa-envelope"></i>
+              <span>hello@stacklycreative.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMON FOOTER COMPONENT CONTAINER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5.3.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Interactive Script with Component Loader -->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+/* Team Member Profile Card */
+.team-member-card {
+  background: #ffffff;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: var(--transition-smooth);
+  height: 100%;
+}
+
+.team-member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 153, 0, 0.3);
+}
+
+.team-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1/1.05;
+  background: #141414;
+}
+
+.team-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-member-card:hover .team-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.team-social-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  display: flex;
+  gap: 10px;
+  background: rgba(16, 16, 16, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-pill);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-fast);
+}
+
+.team-member-card:hover .team-social-overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.team-social-overlay a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.85rem;
+  transition: var(--transition-fast);
+}
+
+.team-social-overlay a:hover {
+  background: var(--color-primary);
+  color: #000000;
+}
+
+.team-info-box {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--color-dark-charcoal);
+}
+
+.team-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Culture Pillars */
+.culture-card {
+  background: #ffffff;
+  border-radius: var(--border-radius-md);
+  padding: 35px 28px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-soft);
+  height: 100%;
+  transition: var(--transition-fast);
+}
+
+.culture-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+}
+
+/* Open Positions Career Card */
+.career-job-card {
+  background: #ffffff;
+  border-radius: var(--border-radius-md);
+  padding: 30px 35px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition-fast);
+  margin-bottom: 20px;
+}
+
+.career-job-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-soft);
+  transform: translateX(6px);
+}

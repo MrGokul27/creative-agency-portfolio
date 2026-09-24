@@ -1,0 +1,77 @@
+/* Category Filter Bar */
+.portfolio-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.portfolio-filter-btn {
+  padding: 12px 26px;
+  border-radius: var(--border-radius-pill);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--color-dark-charcoal);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.portfolio-filter-btn.active,
+.portfolio-filter-btn:hover {
+  background: var(--color-dark-charcoal);
+  color: #ffffff;
+  border-color: var(--color-dark-charcoal);
+}
+
+/* Portfolio Filter Item Transitions */
+.portfolio-filter-item {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Flagship Project Spotlight */
+.spotlight-project-card {
+  background: var(--color-dark-charcoal);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-dark);
+}
+
+.spotlight-metric-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 18px 22px;
+  text-align: center;
+}
+
+.spotlight-metric-val {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+/* Impact Metrics Grid */
+.impact-metric-card {
+  background: #ffffff;
+  border-radius: var(--border-radius-md);
+  padding: 35px 25px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+}
+
+.impact-metric-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 153, 0, 0.15);
+}

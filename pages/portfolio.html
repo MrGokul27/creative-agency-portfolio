@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selected Portfolio - Stackly Creative Agency</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
+
+    <!-- Google Fonts (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6.6.0 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Main Stylesheet & Page Specific CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/portfolio.css" />
+  </head>
+  <body>
+    <!-- COMMON HEADER COMPONENT CONTAINER -->
+    <div id="header-placeholder"></div>
+
+    <!-- SECTION 1: PAGE BANNER & BREADCRUMBS -->
+    <section class="page-banner-section text-center">
+      <div class="container position-relative z-2">
+        <div class="banner-breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>Portfolio</span>
+        </div>
+        <h1 class="banner-title">
+          Selected Works & <span class="text-theme-primary">Case Studies</span>
+        </h1>
+        <p class="banner-desc">
+          Explore our curated gallery of award-winning digital experiences,
+          brand identity systems, high-growth e-commerce platforms, and
+          interactive spatial websites created for ambitious worldwide clients.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE CATEGORY FILTER BAR -->
+    <section class="py-4 bg-white border-bottom">
+      <div class="container">
+        <div class="portfolio-filter-container mb-0">
+          <button class="portfolio-filter-btn active" data-filter="all">
+            All Projects (9)
+          </button>
+          <button class="portfolio-filter-btn" data-filter="branding">
+            Branding
+          </button>
+          <button class="portfolio-filter-btn" data-filter="web">
+            Web Development
+          </button>
+          <button class="portfolio-filter-btn" data-filter="uiux">
+            UI/UX Design
+          </button>
+          <button class="portfolio-filter-btn" data-filter="motion">
+            3D & Motion
+          </button>
+          <button class="portfolio-filter-btn" data-filter="ecommerce">
+            E-Commerce
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CURATED CASE STUDIES GRID (9 DISTINCT PROJECTS) -->
+    <section
+      class="py-5"
+      style="padding-top: 80px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div class="row g-4" id="portfolioGrid">
+          <!-- Project 1 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="uiux"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                  alt="Aetherium Capital"
+                />
+                <span class="portfolio-badge">UI/UX & SaaS</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Aetherium Capital</h4>
+                  <p class="text-white-50 small mb-0">
+                    NextGen Wealth Management Interface
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="ecommerce"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop"
+                  alt="Maison Vesper"
+                />
+                <span class="portfolio-badge">E-Commerce</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Maison Vesper</h4>
+                  <p class="text-white-50 small mb-0">
+                    Luxury Paris Haute Couture Platform
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="motion"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1526738549149-8e07eca6c147?q=80&w=800&auto=format&fit=crop"
+                  alt="Sonora Spatial Audio"
+                />
+                <span class="portfolio-badge">3D & Motion</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Sonora Spatial</h4>
+                  <p class="text-white-50 small mb-0">
+                    WebGL High-Fidelity Audio Experience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="branding"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop"
+                  alt="Botanica Elixirs"
+                />
+                <span class="portfolio-badge">Branding</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Botanica Elixirs</h4>
+                  <p class="text-white-50 small mb-0">
+                    Sustainable Eco-Packaging Identity
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="web"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=800&auto=format&fit=crop"
+                  alt="Kroma Spatial Architecture"
+                />
+                <span class="portfolio-badge">Web Development</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Kroma Architecture</h4>
+                  <p class="text-white-50 small mb-0">
+                    Kinetic Architectural Portfolio
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="uiux"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop"
+                  alt="Zenith AI Assistant"
+                />
+                <span class="portfolio-badge">UI/UX & AI</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Zenith AI Platform</h4>
+                  <p class="text-white-50 small mb-0">
+                    Generative Workflow Workspace
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="branding"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                  alt="Nordic Haven Living"
+                />
+                <span class="portfolio-badge">Branding</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Nordic Haven Living</h4>
+                  <p class="text-white-50 small mb-0">
+                    Scandinavian Interior Lifestyle Brand
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="ecommerce"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop"
+                  alt="Chronos Horology"
+                />
+                <span class="portfolio-badge">E-Commerce</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Chronos Horology</h4>
+                  <p class="text-white-50 small mb-0">
+                    Swiss Timepiece Direct-to-Consumer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9 -->
+          <div
+            class="col-lg-4 col-md-6 portfolio-filter-item"
+            data-category="web"
+          >
+            <div class="portfolio-card">
+              <div class="portfolio-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop"
+                  alt="Vanguard Mobility"
+                />
+                <span class="portfolio-badge">Web Development</span>
+                <div class="portfolio-overlay">
+                  <h4 class="portfolio-title">Vanguard EV Mobility</h4>
+                  <p class="text-white-50 small mb-0">
+                    Interactive Clean Energy Showcase
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FLAGSHIP PROJECT SPOTLIGHT (DEEP DIVE BREAKDOWN) -->
+    <section
+      class="bg-theme-charcoal py-5"
+      style="padding-top: 110px !important; padding-bottom: 110px !important"
+    >
+      <div class="container">
+        <div class="spotlight-project-card p-4 p-lg-5">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <span
+                class="badge bg-theme-primary text-black fw-bold text-uppercase px-3 py-2 rounded-pill mb-3"
+                >Featured Case Study</span
+              >
+              <h2 class="display-5 fw-bolder text-white mb-3">
+                Aetherium Capital: From Obscurity to Category Dominance
+              </h2>
+              <p class="text-white-50 mb-4">
+                <strong>The Challenge:</strong> A premier European private
+                equity fund needed to shed their dated image and launch an
+                ultra-modern digital client portal that instills institutional
+                trust and commands executive attention.
+              </p>
+              <p class="text-white-50 mb-4">
+                <strong>Our Solution:</strong> We created an authoritative
+                monolithic visual identity paired with a custom Next.js
+                frontend, micro-animated data visualizations, and bank-grade
+                secure login flows.
+              </p>
+
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="spotlight-metric-pill">
+                    <div class="spotlight-metric-val">+210%</div>
+                    <span class="small text-white-50">Inbound Leads</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="spotlight-metric-pill">
+                    <div class="spotlight-metric-val">$1.2B+</div>
+                    <span class="small text-white-50">AUM Managed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div
+                class="rounded-4 overflow-hidden border border-white border-opacity-10 shadow-lg"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                  alt="Aetherium Platform Deep Dive"
+                  class="w-100 object-fit-cover"
+                  style="height: 420px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CLIENT TESTIMONIAL ON PORTFOLIO WORK -->
+    <section class="bg-theme-secondary py-5">
+      <div class="container py-4 text-center">
+        <div class="max-w-700 mx-auto" style="max-width: 780px">
+          <div class="d-flex justify-content-center text-warning mb-3">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h3 class="fw-bold mb-4">
+            "The brand identity and platform Stackly delivered allowed us to
+            close our Series B round with unanimous investor excitement. Truly
+            unprecedented creativity."
+          </h3>
+          <h5 class="fw-bold mb-0">Arthur Pendelton</h5>
+          <p class="text-muted small">Managing Partner, Aetherium Group</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CUMULATIVE IMPACT METRICS -->
+    <section
+      class="py-5 stats-section-observer"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
+    >
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-lg-3">
+            <div class="impact-metric-card">
+              <h2 class="display-4 fw-bolder text-theme-primary mb-1">
+                <span class="stat-counter" data-target="140">140</span>M+
+              </h2>
+              <h6 class="fw-bold text-dark mb-0">End Users Reached</h6>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="impact-metric-card">
+              <h2 class="display-4 fw-bolder text-theme-primary mb-1">
+                $<span class="stat-counter" data-target="450">450</span>M+
+              </h2>
+              <h6 class="fw-bold text-dark mb-0">Client Valuation Lift</h6>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="impact-metric-card">
+              <h2 class="display-4 fw-bolder text-theme-primary mb-1">
+                <span class="stat-counter" data-target="95">95</span>+
+              </h2>
+              <h6 class="fw-bold text-dark mb-0">Launch Successes</h6>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="impact-metric-card">
+              <h2 class="display-4 fw-bolder text-theme-primary mb-1">
+                <span class="stat-counter" data-target="100">100</span>%
+              </h2>
+              <h6 class="fw-bold text-dark mb-0">On-Time Delivery</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: DESIGN AWARDS FOR PORTFOLIO WORKS -->
+    <section
+      class="bg-theme-secondary py-5"
+      style="padding-top: 90px !important; padding-bottom: 90px !important"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Accolades</span>
+          <h2 class="section-title">Award-Winning Recognition</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center text-center">
+          <div class="col-md-3 col-6">
+            <div class="p-4 bg-white rounded-3 shadow-sm">
+              <h4 class="fw-bold mb-1">Awwwards</h4>
+              <p class="small text-muted mb-0">Site of the Day (2025)</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="p-4 bg-white rounded-3 shadow-sm">
+              <h4 class="fw-bold mb-1">FWA</h4>
+              <p class="small text-muted mb-0">FWA of the Day (2024)</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="p-4 bg-white rounded-3 shadow-sm">
+              <h4 class="fw-bold mb-1">Red Dot</h4>
+              <p class="small text-muted mb-0">Best of the Best (2023)</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="p-4 bg-white rounded-3 shadow-sm">
+              <h4 class="fw-bold mb-1">CSSDA</h4>
+              <p class="small text-muted mb-0">Special Kudos (2024)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CLIENT LOGOS & COLLABORATORS CLOUD -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <p
+          class="text-uppercase fw-bold letter-spacing-2 small text-muted mb-4"
+        >
+          Partner Brands We've Designed For
+        </p>
+        <div
+          class="row justify-content-center align-items-center g-4 opacity-75"
+        >
+          <div class="col-4 col-md-2">
+            <h5 class="fw-bold mb-0">VELOCITY</h5>
+          </div>
+          <div class="col-4 col-md-2"><h5 class="fw-bold mb-0">LUMINA</h5></div>
+          <div class="col-4 col-md-2"><h5 class="fw-bold mb-0">NEXUS</h5></div>
+          <div class="col-4 col-md-2"><h5 class="fw-bold mb-0">AURORA</h5></div>
+          <div class="col-4 col-md-2">
+            <h5 class="fw-bold mb-0">EQUINOX</h5>
+          </div>
+          <div class="col-4 col-md-2"><h5 class="fw-bold mb-0">ZENITH</h5></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: START YOUR PROJECT CTA -->
+    <section class="bg-theme-secondary py-5">
+      <div class="container py-4">
+        <div
+          class="bg-theme-charcoal text-white rounded-5 p-5 position-relative overflow-hidden text-center border border-white border-opacity-10 shadow-lg"
+        >
+          <span
+            class="badge bg-theme-primary text-black fw-bold text-uppercase px-3 py-2 rounded-pill mb-3"
+            >Your Project Next</span
+          >
+          <h2 class="display-5 fw-bolder mb-3">
+            Have an Ambitious Vision in Mind?
+          </h2>
+          <p class="text-white-50 lead mx-auto mb-4" style="max-width: 650px">
+            Let's create the next award-winning benchmark together. Get in touch
+            with our team today.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#" class="btn-creative btn-creative-primary">
+              <span>Book Project Discovery</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMON FOOTER COMPONENT CONTAINER -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap 5.3.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Interactive Script with Component Loader -->
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
