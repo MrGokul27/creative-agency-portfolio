@@ -185,3 +185,163 @@
   box-shadow: var(--shadow-soft);
   transform: translateX(6px);
 }
+
+/* SECTION 7: Studio Perks & Benchmarks Hover Effects */
+.studio-perks-section {
+  position: relative;
+}
+
+.studio-perk-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-md);
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.studio-perk-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary),
+    var(--color-vivid-yellow)
+  );
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.studio-perk-item .perk-icon-wrap {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  background: rgba(255, 153, 0, 0.12);
+  border: 1px solid rgba(255, 153, 0, 0.25);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+.studio-perk-item .perk-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-perk-item .perk-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-bottom: 3px;
+  transition: var(--transition-fast);
+}
+
+.studio-perk-item .perk-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+  line-height: 1.4;
+  transition: var(--transition-fast);
+}
+
+.studio-perk-item:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 153, 0, 0.45);
+  transform: translateX(8px);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(255, 153, 0, 0.15);
+}
+
+.studio-perk-item:hover::before {
+  transform: scaleY(1);
+}
+
+.studio-perk-item:hover .perk-icon-wrap {
+  background: var(--color-primary);
+  color: #000000;
+  border-color: var(--color-primary);
+  transform: scale(1.12) rotate(6deg);
+  box-shadow: 0 0 18px rgba(255, 153, 0, 0.5);
+}
+
+.studio-perk-item:hover .perk-title {
+  color: var(--color-primary);
+}
+
+.studio-perk-item:hover .perk-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Studio Perks Image Card */
+.studio-perks-media-wrap {
+  position: relative;
+}
+
+.studio-perks-img-box {
+  transition: var(--transition-smooth);
+}
+
+.studio-perks-img {
+  transition:
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.4s ease;
+  display: block;
+}
+
+.studio-perk-badge-float {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(16, 16, 16, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px 18px;
+  border-radius: var(--border-radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.studio-perks-media-wrap:hover .studio-perks-img-box {
+  border-color: rgba(255, 153, 0, 0.4) !important;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 153, 0, 0.15) !important;
+  transform: translateY(-6px);
+}
+
+.studio-perks-media-wrap:hover .studio-perks-img {
+  transform: scale(1.06);
+}
+
+.studio-perks-media-wrap:hover .studio-perk-badge-float {
+  background: var(--color-primary);
+  color: #000000;
+  border-color: var(--color-primary);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.studio-perks-media-wrap:hover .studio-perk-badge-float i {
+  color: #000000 !important;
+}

@@ -120,6 +120,15 @@
   color: var(--color-primary);
 }
 
+.tooling-icon-box h6 {
+  color: var(--color-dark-charcoal);
+  transition: var(--transition-fast);
+}
+
+.tooling-icon-box:hover h6 {
+  color: var(--color-primary);
+}
+
 /* Custom Accordion Styling for FAQ */
 .custom-faq-accordion .accordion-item {
   background: #ffffff;
