@@ -1,3 +1,15 @@
+/* Contact Banner Background */
+.contact-banner-section {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16, 16, 16, 0.8) 0%,
+      rgba(16, 16, 16, 0.92) 100%
+    ),
+    url("../images/contact/contact-banner-image.webp") center center / cover
+      no-repeat !important;
+}
+
 /* Contact Cards */
 .contact-info-card {
   background: #ffffff;

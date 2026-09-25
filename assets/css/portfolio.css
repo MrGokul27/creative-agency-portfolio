@@ -1,3 +1,15 @@
+/* Portfolio Banner Background */
+.portfolio-banner-section {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(16, 16, 16, 0.8) 0%,
+      rgba(16, 16, 16, 0.92) 100%
+    ),
+    url("../images/portfolio/portfolio-banner-image.webp") center center / cover
+      no-repeat !important;
+}
+
 /* Category Filter Bar */
 .portfolio-filter-container {
   display: flex;

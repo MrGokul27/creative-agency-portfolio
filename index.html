@@ -35,7 +35,7 @@
 
     <!-- SECTION 1: HERO SHOWCASE  -->
     <section
-      class="bg-theme-charcoal position-relative overflow-hidden hero-section"
+      class="bg-theme-charcoal position-relative overflow-hidden hero-section hero-banner-home text-white"
       style="padding: 220px 0 140px"
     >
       <!-- Ambient Glow Elements -->
@@ -231,56 +231,35 @@
             </p>
 
             <div class="d-flex flex-column gap-3 mb-4">
-              <div class="d-flex align-items-center gap-3">
-                <div
-                  class="rounded-circle p-2 bg-warning bg-opacity-25 text-warning d-flex align-items-center justify-content-center"
-                  style="
-                    width: 38px;
-                    height: 38px;
-                    color: var(--color-secondary) !important;
-                  "
-                >
+              <div class="about-feature-item">
+                <div class="about-feature-icon">
                   <i class="fa-solid fa-check"></i>
                 </div>
-                <span class="fw-semibold text-dark"
+                <span class="about-feature-text fw-semibold text-dark"
                   >Proprietary 4-Phase Discovery & Execution Framework</span
                 >
               </div>
-              <div class="d-flex align-items-center gap-3">
-                <div
-                  class="rounded-circle p-2 bg-warning bg-opacity-25 text-warning d-flex align-items-center justify-content-center"
-                  style="
-                    width: 38px;
-                    height: 38px;
-                    color: var(--color-secondary) !important;
-                  "
-                >
+              <div class="about-feature-item">
+                <div class="about-feature-icon">
                   <i class="fa-solid fa-check"></i>
                 </div>
-                <span class="fw-semibold text-dark"
+                <span class="about-feature-text fw-semibold text-dark"
                   >Cross-functional team of top 1% designers & creative
                   technologists</span
                 >
               </div>
-              <div class="d-flex align-items-center gap-3">
-                <div
-                  class="rounded-circle p-2 bg-warning bg-opacity-25 text-warning d-flex align-items-center justify-content-center"
-                  style="
-                    width: 38px;
-                    height: 38px;
-                    color: var(--color-secondary) !important;
-                  "
-                >
+              <div class="about-feature-item">
+                <div class="about-feature-icon">
                   <i class="fa-solid fa-check"></i>
                 </div>
-                <span class="fw-semibold text-dark"
+                <span class="about-feature-text fw-semibold text-dark"
                   >Obsessive focus on conversion ergonomics and brand
                   memorability</span
                 >
               </div>
             </div>
 
-            <a href="#" class="btn-creative btn-creative-dark">
+            <a href="pages/about.html" class="btn-creative btn-creative-dark">
               <span>Read Our Story</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -288,32 +267,16 @@
 
           <div class="col-lg-6">
             <div class="position-relative">
-              <div
-                class="rounded-4 overflow-hidden shadow-lg border border-black border-opacity-10"
-              >
+              <div class="about-image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop"
                   alt="Creative Agency Team Collaborating"
-                  class="w-100 object-fit-cover"
-                  style="height: 480px"
                 />
               </div>
 
               <!-- Floating Stat Badge -->
-              <div
-                class="position-absolute bottom-0 start-0 translate-middle-y ms-4 p-4 rounded-4 shadow-lg text-white"
-                style="
-                  background: var(--color-dark-charcoal);
-                  border: 2px solid var(--color-primary);
-                  max-width: 240px;
-                "
-              >
-                <h3
-                  class="fw-bolder mb-0 text-theme-primary"
-                  style="font-size: 2.8rem"
-                >
-                  12+
-                </h3>
+              <div class="about-stat-badge">
+                <h3 class="about-stat-number">12+</h3>
                 <p class="small text-white-50 mb-0 fw-semibold text-uppercase">
                   Years of Global Design Impact & Excellence
                 </p>
@@ -347,35 +310,93 @@
 
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
-            <div class="studio-gallery-img shadow-sm">
+            <div class="studio-gallery-card">
               <img
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=700&auto=format&fit=crop"
                 alt="Design Lab Studio"
               />
+              <div class="studio-gallery-overlay">
+                <span class="studio-gallery-badge"
+                  ><i class="fa-solid fa-location-dot me-1"></i> London
+                  Hub</span
+                >
+                <div class="d-flex align-items-end justify-content-between">
+                  <div>
+                    <h5 class="studio-gallery-title">Design Lab Studio</h5>
+                    <p class="studio-gallery-desc">UX Research & Prototyping</p>
+                  </div>
+                  <div class="studio-zoom-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="studio-gallery-img shadow-sm">
+            <div class="studio-gallery-card">
               <img
                 src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=700&auto=format&fit=crop"
                 alt="Product Architecture Sprints"
               />
+              <div class="studio-gallery-overlay">
+                <span class="studio-gallery-badge"
+                  ><i class="fa-solid fa-bolt me-1"></i> Sprint Pod</span
+                >
+                <div class="d-flex align-items-end justify-content-between">
+                  <div>
+                    <h5 class="studio-gallery-title">Architecture Sprints</h5>
+                    <p class="studio-gallery-desc">Design System Workflows</p>
+                  </div>
+                  <div class="studio-zoom-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="studio-gallery-img shadow-sm">
+            <div class="studio-gallery-card">
               <img
                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=700&auto=format&fit=crop"
                 alt="Strategy Roundtables"
               />
+              <div class="studio-gallery-overlay">
+                <span class="studio-gallery-badge"
+                  ><i class="fa-solid fa-lightbulb me-1"></i> Strategy
+                  Room</span
+                >
+                <div class="d-flex align-items-end justify-content-between">
+                  <div>
+                    <h5 class="studio-gallery-title">Strategy Roundtables</h5>
+                    <p class="studio-gallery-desc">Brand Ideation & Sprints</p>
+                  </div>
+                  <div class="studio-zoom-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="studio-gallery-img shadow-sm">
+            <div class="studio-gallery-card">
               <img
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=700&auto=format&fit=crop"
                 alt="Creative Coding Sessions"
               />
+              <div class="studio-gallery-overlay">
+                <span class="studio-gallery-badge"
+                  ><i class="fa-solid fa-code me-1"></i> Tech Lab</span
+                >
+                <div class="d-flex align-items-end justify-content-between">
+                  <div>
+                    <h5 class="studio-gallery-title">Creative Coding</h5>
+                    <p class="studio-gallery-desc">WebGL & Motion Systems</p>
+                  </div>
+                  <div class="studio-zoom-icon">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -657,38 +678,54 @@
         >
           Trusted by Pioneering Startups & Fortune 500 Innovators
         </p>
-        <div
-          class="row justify-content-center align-items-center g-4 opacity-75"
-        >
-          <div class="col-4 col-md-2">
-            <h4 class="fw-bolder text-dark mb-0">
-              <i class="fa-brands fa-spotify me-1"></i> Spotify
-            </h4>
+        <div class="row justify-content-center align-items-center g-3 g-md-4">
+          <div class="col-6 col-sm-4 col-lg-2">
+            <div class="brand-logo-card">
+              <div class="brand-logo-icon">
+                <i class="fa-brands fa-spotify"></i>
+              </div>
+              <span class="brand-logo-name">Spotify</span>
+            </div>
           </div>
-          <div class="col-4 col-md-2">
-            <h4 class="fw-bolder text-dark mb-0">
-              <i class="fa-brands fa-stripe me-1"></i> Stripe
-            </h4>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <div class="brand-logo-card">
+              <div class="brand-logo-icon">
+                <i class="fa-brands fa-stripe"></i>
+              </div>
+              <span class="brand-logo-name">Stripe</span>
+            </div>
           </div>
-          <div class="col-4 col-md-2">
-            <h4 class="fw-bolder text-dark mb-0">
-              <i class="fa-brands fa-airbnb me-1"></i> Airbnb
-            </h4>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <div class="brand-logo-card">
+              <div class="brand-logo-icon">
+                <i class="fa-brands fa-airbnb"></i>
+              </div>
+              <span class="brand-logo-name">Airbnb</span>
+            </div>
           </div>
-          <div class="col-4 col-md-2">
-            <h4 class="fw-bolder text-dark mb-0">
-              <i class="fa-brands fa-shopify me-1"></i> Shopify
-            </h4>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <div class="brand-logo-card">
+              <div class="brand-logo-icon">
+                <i class="fa-brands fa-shopify"></i>
+              </div>
+              <span class="brand-logo-name">Shopify</span>
+            </div>
           </div>
-          <div class="col-4 col-md-2">
-            <h4 class="fw-bolder text-dark mb-0">
-              <i class="fa-brands fa-figma me-1"></i> Figma
-            </h4>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <div class="brand-logo-card">
+              <div class="brand-logo-icon">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <span class="brand-logo-name">Figma</span>
+            </div>
           </div>
-          <div class="col-4 col-md-2">
-            <h4 class="fw-bolder text-dark mb-0">
-              <i class="fa-brands fa-hubspot me-1"></i> HubSpot
-            </h4>
+          <div class="col-6 col-sm-4 col-lg-2">
+            <div class="brand-logo-card">
+              <div class="brand-logo-icon">
+                <i class="fa-brands fa-hubspot"></i>
+              </div>
+              <span class="brand-logo-name">HubSpot</span>
+            </div>
           </div>
         </div>
       </div>
@@ -919,7 +956,7 @@
             <h2 class="section-title">Meet Our Key Creative Directors.</h2>
           </div>
           <div class="col-lg-5 text-lg-end">
-            <a href="#" class="btn-creative btn-creative-dark">
+            <a href="pages/team.html" class="btn-creative btn-creative-dark">
               <span>Meet All Team Members</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -931,6 +968,10 @@
           <div class="col-lg-4 col-md-6">
             <div class="team-member-card">
               <div class="team-img-wrapper">
+                <span class="team-badge"
+                  ><i class="fa-solid fa-sparkles text-theme-primary me-1"></i>
+                  Executive</span
+                >
                 <img
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
                   alt="Elena Rostova - Executive Creative Director"
@@ -962,6 +1003,10 @@
           <div class="col-lg-4 col-md-6">
             <div class="team-member-card">
               <div class="team-img-wrapper">
+                <span class="team-badge"
+                  ><i class="fa-solid fa-code text-theme-primary me-1"></i>
+                  Technology</span
+                >
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
                   alt="Marcus Vance - Head of Digital Architecture"
@@ -993,6 +1038,12 @@
           <div class="col-lg-4 col-md-6">
             <div class="team-member-card">
               <div class="team-img-wrapper">
+                <span class="team-badge"
+                  ><i
+                    class="fa-solid fa-wand-magic-sparkles text-theme-primary me-1"
+                  ></i>
+                  Product UX</span
+                >
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
                   alt="Sophia Chen - Lead Product & UX Designer"
@@ -1283,7 +1334,7 @@
             </h2>
           </div>
           <div class="col-lg-5 text-lg-end">
-            <a href="#" class="btn-creative btn-creative-outline">
+            <a href="pages/blog.html" class="btn-creative btn-creative-outline">
               <span>Explore All Articles</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -1295,36 +1346,41 @@
           <div class="col-lg-4 col-md-6">
             <div class="blog-grid-card">
               <div class="blog-grid-img-wrapper">
+                <span class="blog-cat-badge">UI/UX Design</span>
                 <img
                   src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=800&auto=format&fit=crop"
                   alt="Design Trends 2026"
                 />
               </div>
               <div class="blog-grid-body">
-                <span class="blog-date-badge"
-                  ><i class="fa-regular fa-clock"></i> March 18, 2026 • 6 min
-                  read</span
+                <span class="blog-meta-badge"
+                  ><i class="fa-regular fa-clock text-theme-primary me-1"></i>
+                  March 18, 2026 • 6 min read</span
                 >
                 <h4 class="blog-grid-title">
                   The Evolution of Spatial UI: How Micro-Interactions Drive
                   Conversion
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="blog-grid-desc">
                   Explore how subtle motion physics and haptic visual feedback
                   enhance user trust in web applications.
                 </p>
                 <div class="blog-author-meta">
-                  <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop"
-                    alt="Elena Rostova"
-                    class="blog-author-avatar"
-                  />
-                  <div>
-                    <h6 class="mb-0 fw-bold small text-dark">Elena Rostova</h6>
-                    <span class="text-muted" style="font-size: 0.75rem"
-                      >Creative Director</span
-                    >
+                  <div class="blog-author-info">
+                    <img
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop"
+                      alt="Elena Rostova"
+                      class="blog-author-avatar"
+                    />
+                    <div>
+                      <h6 class="blog-author-name">Elena Rostova</h6>
+                      <span class="blog-author-role">Creative Director</span>
+                    </div>
                   </div>
+                  <a href="pages/blog.html" class="blog-read-btn">
+                    <span>Read</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1334,36 +1390,41 @@
           <div class="col-lg-4 col-md-6">
             <div class="blog-grid-card">
               <div class="blog-grid-img-wrapper">
+                <span class="blog-cat-badge">Web Tech</span>
                 <img
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
                   alt="Web Architecture & NextGen Code"
                 />
               </div>
               <div class="blog-grid-body">
-                <span class="blog-date-badge"
-                  ><i class="fa-regular fa-clock"></i> March 12, 2026 • 8 min
-                  read</span
+                <span class="blog-meta-badge"
+                  ><i class="fa-regular fa-clock text-theme-primary me-1"></i>
+                  March 12, 2026 • 8 min read</span
                 >
                 <h4 class="blog-grid-title">
                   Engineering Ultra-Fast Web Experiences with Headless CMS &
                   Three.js
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="blog-grid-desc">
                   A deep dive into optimizing heavy 3D rendering pipelines
                   without sacrificing core web vitals and mobile performance.
                 </p>
                 <div class="blog-author-meta">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
-                    alt="Marcus Vance"
-                    class="blog-author-avatar"
-                  />
-                  <div>
-                    <h6 class="mb-0 fw-bold small text-dark">Marcus Vance</h6>
-                    <span class="text-muted" style="font-size: 0.75rem"
-                      >Head of Technology</span
-                    >
+                  <div class="blog-author-info">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+                      alt="Marcus Vance"
+                      class="blog-author-avatar"
+                    />
+                    <div>
+                      <h6 class="blog-author-name">Marcus Vance</h6>
+                      <span class="blog-author-role">Head of Technology</span>
+                    </div>
                   </div>
+                  <a href="pages/blog.html" class="blog-read-btn">
+                    <span>Read</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1373,35 +1434,40 @@
           <div class="col-lg-4 col-md-6">
             <div class="blog-grid-card">
               <div class="blog-grid-img-wrapper">
+                <span class="blog-cat-badge">Branding</span>
                 <img
                   src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop"
                   alt="Brand Strategy Manifesto"
                 />
               </div>
               <div class="blog-grid-body">
-                <span class="blog-date-badge"
-                  ><i class="fa-regular fa-clock"></i> March 04, 2026 • 5 min
-                  read</span
+                <span class="blog-meta-badge"
+                  ><i class="fa-regular fa-clock text-theme-primary me-1"></i>
+                  March 04, 2026 • 5 min read</span
                 >
                 <h4 class="blog-grid-title">
                   Beyond The Logo: Crafting Monolithic Brand Identity Systems
                 </h4>
-                <p class="text-muted small mb-3">
+                <p class="blog-grid-desc">
                   Why modern tech unicorns require adaptive design languages
                   that thrive across digital, physical, and virtual touchpoints.
                 </p>
                 <div class="blog-author-meta">
-                  <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
-                    alt="Sophia Chen"
-                    class="blog-author-avatar"
-                  />
-                  <div>
-                    <h6 class="mb-0 fw-bold small text-dark">Sophia Chen</h6>
-                    <span class="text-muted" style="font-size: 0.75rem"
-                      >Lead UX Architect</span
-                    >
+                  <div class="blog-author-info">
+                    <img
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+                      alt="Sophia Chen"
+                      class="blog-author-avatar"
+                    />
+                    <div>
+                      <h6 class="blog-author-name">Sophia Chen</h6>
+                      <span class="blog-author-role">Lead UX Architect</span>
+                    </div>
                   </div>
+                  <a href="pages/blog.html" class="blog-read-btn">
+                    <span>Read</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
