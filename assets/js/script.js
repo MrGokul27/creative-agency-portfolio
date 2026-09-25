@@ -227,4 +227,43 @@ function setupInteractiveFeatures() {
       videoFrame.setAttribute("src", "");
     });
   }
+
+  // 8. BLOG CATEGORY FILTER FUNCTIONALITY
+  const blogFilterBtns = document.querySelectorAll(".blog-category-pill");
+  const blogItems = document.querySelectorAll(".blog-filter-item");
+
+  if (blogFilterBtns.length > 0 && blogItems.length > 0) {
+    blogFilterBtns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        blogFilterBtns.forEach((b) => b.classList.remove("active"));
+        this.classList.add("active");
+
+        const filterValue = this.getAttribute("data-filter");
+
+        blogItems.forEach((item) => {
+          const itemCategories = (
+            item.getAttribute("data-category") || ""
+          ).split(" ");
+          const isMatch =
+            filterValue === "all" || itemCategories.includes(filterValue);
+
+          if (isMatch) {
+            item.style.display = "";
+            requestAnimationFrame(() => {
+              item.style.opacity = "1";
+              item.style.transform = "scale(1) translateY(0)";
+            });
+          } else {
+            item.style.opacity = "0";
+            item.style.transform = "scale(0.95) translateY(10px)";
+            setTimeout(() => {
+              if (item.style.opacity === "0") {
+                item.style.display = "none";
+              }
+            }, 300);
+          }
+        });
+      });
+    });
+  }
 }
