@@ -269,9 +269,7 @@ img {
   transform: rotate(45deg);
 }
 
-/* ===================================================================
-   HEADER & NAVIGATION
-=================================================================== */
+/* HEADER & NAVIGATION */
 .main-header {
   position: fixed;
   top: 0;
@@ -536,9 +534,7 @@ img {
   color: #000000;
 }
 
-/* ===================================================================
-   COMMON PAGE BANNER (INNER PAGES)
-=================================================================== */
+/* COMMON PAGE BANNER (INNER PAGES) */
 .page-banner-section {
   background: linear-gradient(135deg, #101010 0%, #1a1612 100%);
   padding: 190px 0 100px;
@@ -702,9 +698,7 @@ img {
   line-height: 1.7;
 }
 
-/* ===================================================================
-   INFINITE MARQUEE TICKER
-=================================================================== */
+/* INFINITE MARQUEE TICKER */
 .marquee-wrapper {
   background: var(--color-primary);
   overflow: hidden;
@@ -750,9 +744,7 @@ img {
   }
 }
 
-/* ===================================================================
-   INTERACTIVE CARDS & HOVER EFFECTS
-=================================================================== */
+/* INTERACTIVE CARDS & HOVER EFFECTS */
 .creative-card {
   background: #ffffff;
   border-radius: var(--border-radius-md);
@@ -885,9 +877,7 @@ img {
   color: var(--color-primary);
 }
 
-/* ===================================================================
-   SECTION 3: ABOUT AGENCY (MANIFESTO & PROVEN IMPACT)
-=================================================================== */
+/* SECTION 3: ABOUT AGENCY (MANIFESTO & PROVEN IMPACT) */
 .about-feature-item {
   display: flex;
   align-items: center;
@@ -897,7 +887,6 @@ img {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.04);
   transition: var(--transition-smooth);
-  cursor: pointer;
 }
 
 .about-feature-item:hover {
@@ -1008,9 +997,7 @@ img {
   text-shadow: 0 0 20px rgba(255, 195, 48, 0.5);
 }
 
-/* ===================================================================
-   SECTION 4: WORKSPACE & STUDIO CULTURE (INTERACTIVE GALLERY)
-=================================================================== */
+/* SECTION 4: WORKSPACE & STUDIO CULTURE (INTERACTIVE GALLERY) */
 .studio-gallery-card,
 .studio-gallery-img {
   height: 300px;
@@ -1142,9 +1129,7 @@ img {
   color: #000000;
 }
 
-/* ===================================================================
-   SECTION 7: BRAND TRUST & CLIENT LOGO CLOUD
-=================================================================== */
+/* SECTION 7: BRAND TRUST & CLIENT LOGO CLOUD */
 .brand-logo-card {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.07);
@@ -1157,7 +1142,6 @@ img {
   gap: 10px;
   transition: var(--transition-smooth);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  cursor: pointer;
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -1220,9 +1204,7 @@ img {
   font-weight: 800;
 }
 
-/* ===================================================================
-   SECTION 11: CREATIVE MINDS / TEAM HIGHLIGHT
-=================================================================== */
+/* SECTION 11: CREATIVE MINDS / TEAM HIGHLIGHT */
 .team-member-card {
   height: 100%;
   display: flex;
@@ -1364,9 +1346,7 @@ img {
   margin-bottom: 10px;
 }
 
-/* ===================================================================
-   SECTION 14: LATEST INSIGHTS & ARTICLES (BLOG)
-=================================================================== */
+/* SECTION 14: LATEST INSIGHTS & ARTICLES (BLOG) */
 .blog-grid-card {
   height: 100%;
   display: flex;
@@ -1549,9 +1529,7 @@ img {
   transform: translateX(4px);
 }
 
-/* ===================================================================
-   FOOTER STYLES & SCROLL TO TOP
-=================================================================== */
+/* FOOTER STYLES & SCROLL TO TOP */
 .main-footer {
   background-color: var(--color-dark-charcoal);
   color: #ffffff;
@@ -1773,9 +1751,7 @@ img {
   transform: translateY(-5px);
 }
 
-/* ===================================================================
-   RESPONSIVE BREAKPOINTS
-=================================================================== */
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 1199.98px) {
   .nav-menu {
     display: none;
