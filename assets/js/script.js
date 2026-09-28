@@ -1,5 +1,7 @@
 // Global Component Loader
 document.addEventListener("DOMContentLoaded", () => {
+  initPreloader();
+
   const isRoot =
     !window.location.pathname.includes("/pages/") &&
     !window.location.pathname.includes("\\pages\\");
@@ -34,6 +36,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
   Promise.all(loads).then(() => setupInteractiveFeatures());
 });
+
+// ==========================================================================
+// CREATIVE AGENCY THEME PRELOADER (2-Second Duration Experience)
+// ==========================================================================
+function initPreloader() {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  const percentEl = document.getElementById("preloaderPercent");
+  const barEl = document.getElementById("preloaderBar");
+  const statusEl = document.getElementById("preloaderStatus");
+
+  // Prevent background scrolling during loading
+  document.body.style.overflow = "hidden";
+
+  const totalDuration = 2000; // Exact 2 seconds
+  const startTime = performance.now();
+
+  const statusMessages = [
+    { threshold: 0, text: "Initializing Studio Engine..." },
+    { threshold: 25, text: "Loading Creative Assets..." },
+    { threshold: 58, text: "Rendering Visual Components..." },
+    { threshold: 86, text: "Finalizing Digital Showcase..." },
+    { threshold: 100, text: "Welcome to Stackly." },
+  ];
+
+  function getStatusText(progressPercent) {
+    let current = statusMessages[0].text;
+    for (let i = 0; i < statusMessages.length; i++) {
+      if (progressPercent >= statusMessages[i].threshold) {
+        current = statusMessages[i].text;
+      }
+    }
+    return current;
+  }
+
+  function frame(now) {
+    const elapsed = now - startTime;
+    const rawProgress = Math.min(elapsed / totalDuration, 1);
+
+    // Smooth cubic ease-out curve for natural loading progress
+    const easedProgress = 1 - Math.pow(1 - rawProgress, 2.5);
+    const percent = Math.min(100, Math.floor(easedProgress * 100));
+
+    if (percentEl) {
+      percentEl.textContent = percent;
+    }
+    if (barEl) {
+      barEl.style.width = `${percent}%`;
+    }
+    if (statusEl) {
+      statusEl.textContent = getStatusText(percent);
+    }
+
+    if (rawProgress < 1) {
+      requestAnimationFrame(frame);
+    } else {
+      if (percentEl) percentEl.textContent = "100";
+      if (barEl) barEl.style.width = "100%";
+      if (statusEl) statusEl.textContent = "Welcome to Stackly Studio.";
+
+      preloader.classList.add("is-loaded");
+      document.body.style.overflow = "";
+
+      // Completely hide after curtain transition
+      setTimeout(() => {
+        preloader.classList.add("is-finished");
+        preloader.style.display = "none";
+      }, 850);
+    }
+  }
+
+  requestAnimationFrame(frame);
+}
 
 function normalizeComponentPaths(container, isRoot) {
   if (!container) return;
