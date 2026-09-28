@@ -153,162 +153,316 @@
                 "
               >
                 <!-- Step 1: Services Interested -->
-                <div class="mb-4">
-                  <label class="fw-bold mb-3 d-block"
-                    >1. Which services are you interested in?</label
+                <div class="mb-5 form-section-group">
+                  <label
+                    class="form-step-heading mb-3 d-flex align-items-center gap-2"
                   >
-                  <div class="d-flex flex-wrap">
-                    <input
-                      type="checkbox"
-                      id="srv_brand"
-                      class="service-select-checkbox"
-                      checked
-                    />
-                    <label for="srv_brand" class="service-select-label"
-                      >Brand Strategy & Identity</label
-                    >
+                    <span class="step-badge">1</span>
+                    <span>Which services are you interested in?</span>
+                  </label>
+                  <div class="service-tags-wrapper">
+                    <div class="service-pill-item">
+                      <input
+                        type="checkbox"
+                        id="srv_brand"
+                        name="services[]"
+                        class="service-select-checkbox"
+                        checked
+                      />
+                      <label for="srv_brand" class="service-select-label">
+                        <i class="fa-solid fa-bezier-curve me-2"></i>
+                        <span>Brand Strategy & Identity</span>
+                        <i class="fa-solid fa-check check-indicator ms-2"></i>
+                      </label>
+                    </div>
 
-                    <input
-                      type="checkbox"
-                      id="srv_web"
-                      class="service-select-checkbox"
-                      checked
-                    />
-                    <label for="srv_web" class="service-select-label"
-                      >Custom Web Development</label
-                    >
+                    <div class="service-pill-item">
+                      <input
+                        type="checkbox"
+                        id="srv_web"
+                        name="services[]"
+                        class="service-select-checkbox"
+                        checked
+                      />
+                      <label for="srv_web" class="service-select-label">
+                        <i class="fa-solid fa-code me-2"></i>
+                        <span>Custom Web Development</span>
+                        <i class="fa-solid fa-check check-indicator ms-2"></i>
+                      </label>
+                    </div>
 
-                    <input
-                      type="checkbox"
-                      id="srv_uiux"
-                      class="service-select-checkbox"
-                    />
-                    <label for="srv_uiux" class="service-select-label"
-                      >UI/UX Architecture</label
-                    >
+                    <div class="service-pill-item">
+                      <input
+                        type="checkbox"
+                        id="srv_uiux"
+                        name="services[]"
+                        class="service-select-checkbox"
+                      />
+                      <label for="srv_uiux" class="service-select-label">
+                        <i class="fa-solid fa-layer-group me-2"></i>
+                        <span>UI/UX Architecture</span>
+                        <i class="fa-solid fa-check check-indicator ms-2"></i>
+                      </label>
+                    </div>
 
-                    <input
-                      type="checkbox"
-                      id="srv_3d"
-                      class="service-select-checkbox"
-                    />
-                    <label for="srv_3d" class="service-select-label"
-                      >3D Motion & WebGL</label
-                    >
+                    <div class="service-pill-item">
+                      <input
+                        type="checkbox"
+                        id="srv_3d"
+                        name="services[]"
+                        class="service-select-checkbox"
+                      />
+                      <label for="srv_3d" class="service-select-label">
+                        <i class="fa-solid fa-cubes me-2"></i>
+                        <span>3D Motion & WebGL</span>
+                        <i class="fa-solid fa-check check-indicator ms-2"></i>
+                      </label>
+                    </div>
 
-                    <input
-                      type="checkbox"
-                      id="srv_ecom"
-                      class="service-select-checkbox"
-                    />
-                    <label for="srv_ecom" class="service-select-label"
-                      >Shopify & E-Commerce</label
-                    >
+                    <div class="service-pill-item">
+                      <input
+                        type="checkbox"
+                        id="srv_ecom"
+                        name="services[]"
+                        class="service-select-checkbox"
+                      />
+                      <label for="srv_ecom" class="service-select-label">
+                        <i class="fa-solid fa-bag-shopping me-2"></i>
+                        <span>Shopify & E-Commerce</span>
+                        <i class="fa-solid fa-check check-indicator ms-2"></i>
+                      </label>
+                    </div>
 
-                    <input
-                      type="checkbox"
-                      id="srv_retainer"
-                      class="service-select-checkbox"
-                    />
-                    <label for="srv_retainer" class="service-select-label"
-                      >Monthly Dedicated Retainer</label
-                    >
+                    <div class="service-pill-item">
+                      <input
+                        type="checkbox"
+                        id="srv_retainer"
+                        name="services[]"
+                        class="service-select-checkbox"
+                      />
+                      <label for="srv_retainer" class="service-select-label">
+                        <i class="fa-solid fa-shield-halved me-2"></i>
+                        <span>Monthly Dedicated Retainer</span>
+                        <i class="fa-solid fa-check check-indicator ms-2"></i>
+                      </label>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Step 2: Contact Info -->
-                <div class="row g-4 mb-4">
-                  <div class="col-md-6">
-                    <label class="fw-bold mb-2 small text-uppercase"
-                      >Your Full Name *</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control-custom"
-                      placeholder="e.g. Alexander Wright"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="fw-bold mb-2 small text-uppercase"
-                      >Work Email Address *</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control-custom"
-                      placeholder="alexander@company.com"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="fw-bold mb-2 small text-uppercase"
-                      >Phone Number (Optional)</label
-                    >
-                    <input
-                      type="tel"
-                      class="form-control-custom"
-                      placeholder="+91 9876543210"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <label class="fw-bold mb-2 small text-uppercase"
-                      >Company / Project Name</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control-custom"
-                      placeholder="e.g. Acme Corp"
-                    />
+                <div class="mb-5 form-section-group">
+                  <label
+                    class="form-step-heading mb-3 d-flex align-items-center gap-2"
+                  >
+                    <span class="step-badge">2</span>
+                    <span>Your Contact Information</span>
+                  </label>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="form-floating-custom">
+                        <span class="input-icon"
+                          ><i class="fa-regular fa-user"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control-custom"
+                          placeholder="Your Full Name *"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating-custom">
+                        <span class="input-icon"
+                          ><i class="fa-regular fa-envelope"></i
+                        ></span>
+                        <input
+                          type="email"
+                          class="form-control-custom"
+                          placeholder="Work Email Address *"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating-custom">
+                        <span class="input-icon"
+                          ><i class="fa-solid fa-phone"></i
+                        ></span>
+                        <input
+                          type="tel"
+                          class="form-control-custom"
+                          placeholder="Phone Number (Optional)"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating-custom">
+                        <span class="input-icon"
+                          ><i class="fa-regular fa-building"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="form-control-custom"
+                          placeholder="Company / Organization Name"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Step 3: Project Budget -->
-                <div class="mb-4">
-                  <label class="fw-bold mb-2 small text-uppercase"
-                    >Estimated Project Budget (USD)</label
+                <!-- Step 3: Interactive Budget Selector -->
+                <div class="mb-5 form-section-group">
+                  <label
+                    class="form-step-heading mb-3 d-flex align-items-center gap-2"
                   >
-                  <select class="form-control-custom" style="cursor: pointer">
-                    <option value="5k-10k">
-                      $5,000 – $10,000 (Sprint Launchpad)
-                    </option>
-                    <option value="10k-25k" selected>
-                      $10,000 – $25,000 (Standard Full Scope)
-                    </option>
-                    <option value="25k-50k">
-                      $25,000 – $50,000 (Complex Architecture / WebGL)
-                    </option>
-                    <option value="50k+">
-                      $50,000+ (Enterprise Transformation)
-                    </option>
-                  </select>
+                    <span class="step-badge">3</span>
+                    <span>Estimated Project Budget (USD)</span>
+                  </label>
+                  <div class="budget-grid-selector row g-3">
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="budget-card-option">
+                        <input
+                          type="radio"
+                          name="project_budget"
+                          value="5k-10k"
+                          class="budget-radio"
+                        />
+                        <div class="budget-card-inner">
+                          <div class="budget-card-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                          </div>
+                          <span class="budget-amount">$5K – $10K</span>
+                          <span class="budget-desc">Sprint Launchpad</span>
+                          <div class="budget-check-dot">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="budget-card-option">
+                        <input
+                          type="radio"
+                          name="project_budget"
+                          value="10k-25k"
+                          class="budget-radio"
+                          checked
+                        />
+                        <div class="budget-card-inner">
+                          <span class="budget-popular-tag">Popular</span>
+                          <div class="budget-card-icon">
+                            <i class="fa-solid fa-gem"></i>
+                          </div>
+                          <span class="budget-amount">$10K – $25K</span>
+                          <span class="budget-desc">Standard Full Scope</span>
+                          <div class="budget-check-dot">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="budget-card-option">
+                        <input
+                          type="radio"
+                          name="project_budget"
+                          value="25k-50k"
+                          class="budget-radio"
+                        />
+                        <div class="budget-card-inner">
+                          <div class="budget-card-icon">
+                            <i class="fa-solid fa-cubes"></i>
+                          </div>
+                          <span class="budget-amount">$25K – $50K</span>
+                          <span class="budget-desc">Complex & WebGL</span>
+                          <div class="budget-check-dot">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                      <label class="budget-card-option">
+                        <input
+                          type="radio"
+                          name="project_budget"
+                          value="50k+"
+                          class="budget-radio"
+                        />
+                        <div class="budget-card-inner">
+                          <div class="budget-card-icon">
+                            <i class="fa-solid fa-crown"></i>
+                          </div>
+                          <span class="budget-amount">$50K+</span>
+                          <span class="budget-desc">Enterprise Scale</span>
+                          <div class="budget-check-dot">
+                            <i class="fa-solid fa-check"></i>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
                 </div>
 
                 <!-- Step 4: Message -->
-                <div class="mb-5">
-                  <label class="fw-bold mb-2 small text-uppercase"
-                    >Project Overview & Goals *</label
+                <div class="mb-5 form-section-group">
+                  <label
+                    class="form-step-heading mb-3 d-flex align-items-center gap-2"
                   >
-                  <textarea
-                    class="form-control-custom"
-                    rows="5"
-                    placeholder="Tell us about your brand challenge, target audience, preferred launch deadline, and any reference websites..."
-                    required
-                  ></textarea>
+                    <span class="step-badge">4</span>
+                    <span>Project Overview & Goals *</span>
+                  </label>
+                  <div class="form-floating-custom">
+                    <span class="input-icon textarea-icon"
+                      ><i class="fa-regular fa-message"></i
+                    ></span>
+                    <textarea
+                      class="form-control-custom form-textarea-custom"
+                      rows="5"
+                      placeholder="Tell us about your brand challenge, target audience, preferred launch deadline, and any reference websites..."
+                      required
+                    ></textarea>
+                  </div>
                 </div>
 
-                <!-- Submit Button -->
-                <div class="text-center">
+                <!-- Submit Button & Trust Badges -->
+                <div class="text-center pt-2">
                   <button
                     type="submit"
-                    class="btn-creative btn-creative-dark py-3 px-5"
+                    class="btn-creative btn-creative-dark btn-inquiry-submit py-3 px-5"
                   >
                     <span>Submit Project Inquiry</span>
-                    <i class="fa-solid fa-paper-plane"></i>
+                    <i class="fa-solid fa-paper-plane ms-2"></i>
                   </button>
-                  <p class="small text-muted mt-3 mb-0">
-                    <i class="fa-solid fa-lock me-1"></i> We respect your
-                    privacy. Standard mutual NDA applied upon request.
-                  </p>
+                  <div
+                    class="d-flex flex-wrap justify-content-center gap-4 mt-4 text-muted small"
+                  >
+                    <div class="trust-badge-item">
+                      <i
+                        class="fa-solid fa-shield-halved text-warning"
+                        style="color: var(--color-primary) !important"
+                      ></i>
+                      <span>Mutual NDA Protected</span>
+                    </div>
+                    <div class="trust-badge-item">
+                      <i
+                        class="fa-solid fa-bolt text-warning"
+                        style="color: var(--color-primary) !important"
+                      ></i>
+                      <span>24-Hour Guaranteed SLA</span>
+                    </div>
+                    <div class="trust-badge-item">
+                      <i
+                        class="fa-solid fa-user-tie text-warning"
+                        style="color: var(--color-primary) !important"
+                      ></i>
+                      <span>Reviewed by Creative Director</span>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
@@ -402,56 +556,187 @@
 
     <!-- SECTION 6: GLOBAL BRANCHES & HUBS -->
     <section
-      class="bg-theme-secondary py-5"
+      class="bg-theme-secondary py-5 position-relative overflow-hidden"
       style="padding-top: 100px !important; padding-bottom: 100px !important"
     >
-      <div class="container">
+      <div class="container position-relative z-2">
         <div class="text-center mb-5">
           <span class="section-tag">Global Presence</span>
           <h2 class="section-title">International Creative Hubs</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px">
+            Strategically positioned in major creative and tech capitals to
+            deliver synchronized, round-the-clock design and engineering
+            excellence.
+          </p>
         </div>
 
         <div class="row g-4">
+          <!-- London Card -->
           <div class="col-md-6 col-lg-3">
             <div class="branch-card">
-              <h4 class="fw-bold mb-2">London (HQ)</h4>
-              <p class="text-muted small mb-3">
-                24 St James's Square, London SW1Y 4JH
-              </p>
-              <span class="badge bg-theme-primary text-black fw-bold"
+              <div
+                class="branch-card-header d-flex justify-content-between align-items-center mb-3"
+              >
+                <div class="branch-icon-box">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <span class="branch-status-pill">
+                  <span class="status-pulse-dot"></span> GMT / London
+                </span>
+              </div>
+              <h4 class="fw-bold mb-1 branch-city-title">London (HQ)</h4>
+              <span
+                class="badge bg-theme-primary text-black fw-bold mb-3 d-inline-block"
                 >Primary Studio</span
               >
+              <p class="branch-address text-muted small mb-4">
+                <i
+                  class="fa-solid fa-location-dot me-2 text-warning"
+                  style="color: var(--color-primary) !important"
+                ></i>
+                24 St James's Square, London SW1Y 4JH
+              </p>
+              <div
+                class="branch-card-footer mt-auto pt-3 border-top d-flex justify-content-between align-items-center"
+              >
+                <span class="small text-muted"
+                  ><i class="fa-solid fa-users me-1"></i> 35+ Creatives</span
+                >
+                <a
+                  href="#"
+                  class="branch-action-link"
+                  aria-label="Explore London studio on Google Maps"
+                >
+                  <span>View Map</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- Manchester Card -->
           <div class="col-md-6 col-lg-3">
             <div class="branch-card">
-              <h4 class="fw-bold mb-2">Manchester</h4>
-              <p class="text-muted small mb-3">
-                100 King Street, Manchester M2 4WU
-              </p>
-              <span class="badge bg-dark text-white fw-bold"
+              <div
+                class="branch-card-header d-flex justify-content-between align-items-center mb-3"
+              >
+                <div class="branch-icon-box">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <span class="branch-status-pill">
+                  <span class="status-pulse-dot"></span> GMT / UK
+                </span>
+              </div>
+              <h4 class="fw-bold mb-1 branch-city-title">Manchester</h4>
+              <span class="badge bg-dark text-white fw-bold mb-3 d-inline-block"
                 >Engineering Lab</span
               >
+              <p class="branch-address text-muted small mb-4">
+                <i
+                  class="fa-solid fa-location-dot me-2 text-warning"
+                  style="color: var(--color-primary) !important"
+                ></i>
+                100 King Street, Manchester M2 4WU
+              </p>
+              <div
+                class="branch-card-footer mt-auto pt-3 border-top d-flex justify-content-between align-items-center"
+              >
+                <span class="small text-muted"
+                  ><i class="fa-solid fa-users me-1"></i> 20+ Engineers</span
+                >
+                <a
+                  href="#"
+                  class="branch-action-link"
+                  aria-label="Explore Manchester studio on Google Maps"
+                >
+                  <span>View Map</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- New York Card -->
           <div class="col-md-6 col-lg-3">
             <div class="branch-card">
-              <h4 class="fw-bold mb-2">New York</h4>
-              <p class="text-muted small mb-3">
-                575 5th Ave, New York, NY 10017
-              </p>
-              <span class="badge bg-dark text-white fw-bold"
+              <div
+                class="branch-card-header d-flex justify-content-between align-items-center mb-3"
+              >
+                <div class="branch-icon-box">
+                  <i class="fa-solid fa-city"></i>
+                </div>
+                <span class="branch-status-pill">
+                  <span class="status-pulse-dot"></span> EST / NYC
+                </span>
+              </div>
+              <h4 class="fw-bold mb-1 branch-city-title">New York</h4>
+              <span class="badge bg-dark text-white fw-bold mb-3 d-inline-block"
                 >Client Relations</span
               >
+              <p class="branch-address text-muted small mb-4">
+                <i
+                  class="fa-solid fa-location-dot me-2 text-warning"
+                  style="color: var(--color-primary) !important"
+                ></i>
+                575 5th Ave, New York, NY 10017
+              </p>
+              <div
+                class="branch-card-footer mt-auto pt-3 border-top d-flex justify-content-between align-items-center"
+              >
+                <span class="small text-muted"
+                  ><i class="fa-solid fa-users me-1"></i> 18+ Strategists</span
+                >
+                <a
+                  href="#"
+                  class="branch-action-link"
+                  aria-label="Explore New York studio on Google Maps"
+                >
+                  <span>View Map</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
+
+          <!-- Singapore Card -->
           <div class="col-md-6 col-lg-3">
             <div class="branch-card">
-              <h4 class="fw-bold mb-2">Singapore</h4>
-              <p class="text-muted small mb-3">
+              <div
+                class="branch-card-header d-flex justify-content-between align-items-center mb-3"
+              >
+                <div class="branch-icon-box">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <span class="branch-status-pill">
+                  <span class="status-pulse-dot"></span> SGT / APAC
+                </span>
+              </div>
+              <h4 class="fw-bold mb-1 branch-city-title">Singapore</h4>
+              <span class="badge bg-dark text-white fw-bold mb-3 d-inline-block"
+                >APAC Hub</span
+              >
+              <p class="branch-address text-muted small mb-4">
+                <i
+                  class="fa-solid fa-location-dot me-2 text-warning"
+                  style="color: var(--color-primary) !important"
+                ></i>
                 1 Raffles Place, Singapore 048616
               </p>
-              <span class="badge bg-dark text-white fw-bold">APAC Hub</span>
+              <div
+                class="branch-card-footer mt-auto pt-3 border-top d-flex justify-content-between align-items-center"
+              >
+                <span class="small text-muted"
+                  ><i class="fa-solid fa-users me-1"></i> 15+ Producers</span
+                >
+                <a
+                  href="#"
+                  class="branch-action-link"
+                  aria-label="Explore Singapore studio on Google Maps"
+                >
+                  <span>View Map</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -467,82 +752,196 @@
         <div class="text-center mb-5">
           <span class="section-tag">Onboarding Process</span>
           <h2 class="section-title">Client Inquiry FAQ</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px">
+            Everything you need to know about initiating a collaboration,
+            project timelines, confidentiality, and our engagement terms.
+          </p>
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-lg-8">
+          <div class="col-lg-9">
             <div class="accordion custom-faq-accordion" id="contactFaq">
-              <div class="accordion-item">
+              <!-- Item 1 -->
+              <div class="accordion-item custom-faq-item mb-3">
                 <h2 class="accordion-header" id="cfaqOne">
                   <button
-                    class="accordion-button"
+                    class="accordion-button custom-faq-btn"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#cCollapseOne"
                     aria-expanded="true"
+                    aria-controls="cCollapseOne"
                   >
-                    How quickly will you respond to our initial inquiry?
+                    <span class="faq-number">01</span>
+                    <span class="faq-question-text"
+                      >How quickly will you respond to our initial
+                      inquiry?</span
+                    >
+                    <span class="faq-icon-wrapper">
+                      <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </span>
                   </button>
                 </h2>
                 <div
                   id="cCollapseOne"
                   class="accordion-collapse collapse show"
+                  aria-labelledby="cfaqOne"
                   data-bs-parent="#contactFaq"
                 >
-                  <div class="accordion-body">
-                    Our executive team reviews every form submission and
-                    responds within 24 business hours with initial feedback and
-                    proposed discovery call slots.
+                  <div class="accordion-body custom-faq-body">
+                    Our senior executive team evaluates every inquiry within
+                    <strong>24 business hours</strong>. You will receive an
+                    email confirmation with initial impressions, team
+                    availability, and an invitation link for a 30-minute
+                    introductory discovery session.
                   </div>
                 </div>
               </div>
 
-              <div class="accordion-item">
+              <!-- Item 2 -->
+              <div class="accordion-item custom-faq-item mb-3">
                 <h2 class="accordion-header" id="cfaqTwo">
                   <button
-                    class="accordion-button collapsed"
+                    class="accordion-button custom-faq-btn collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#cCollapseTwo"
+                    aria-expanded="false"
+                    aria-controls="cCollapseTwo"
                   >
-                    What information should we prepare before our discovery
-                    call?
+                    <span class="faq-number">02</span>
+                    <span class="faq-question-text"
+                      >What information should we prepare before our discovery
+                      call?</span
+                    >
+                    <span class="faq-icon-wrapper">
+                      <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </span>
                   </button>
                 </h2>
                 <div
                   id="cCollapseTwo"
                   class="accordion-collapse collapse"
+                  aria-labelledby="cfaqTwo"
                   data-bs-parent="#contactFaq"
                 >
-                  <div class="accordion-body">
-                    A brief overview of your business goals, target launch
-                    timeline, approximate budget parameters, and links to any
-                    competitor benchmarks you admire will help us maximize the
-                    productivity of our first meeting.
+                  <div class="accordion-body custom-faq-body">
+                    Having a brief overview of your business objectives, target
+                    audience, expected launch timeline, and benchmark references
+                    or design inspirations you admire will help us maximize our
+                    first conversation. If you already have brand guidelines or
+                    technical specifications, feel free to share them!
                   </div>
                 </div>
               </div>
 
-              <div class="accordion-item">
+              <!-- Item 3 -->
+              <div class="accordion-item custom-faq-item mb-3">
                 <h2 class="accordion-header" id="cfaqThree">
                   <button
-                    class="accordion-button collapsed"
+                    class="accordion-button custom-faq-btn collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#cCollapseThree"
+                    aria-expanded="false"
+                    aria-controls="cCollapseThree"
                   >
-                    Can we execute a Non-Disclosure Agreement (NDA) first?
+                    <span class="faq-number">03</span>
+                    <span class="faq-question-text"
+                      >Can we execute a Non-Disclosure Agreement (NDA)
+                      first?</span
+                    >
+                    <span class="faq-icon-wrapper">
+                      <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </span>
                   </button>
                 </h2>
                 <div
                   id="cCollapseThree"
                   class="accordion-collapse collapse"
+                  aria-labelledby="cfaqThree"
                   data-bs-parent="#contactFaq"
                 >
-                  <div class="accordion-body">
-                    Absolutely. We regularly sign mutual NDAs before diving into
-                    proprietary product concepts or unannounced brand
-                    strategies.
+                  <div class="accordion-body custom-faq-body">
+                    <strong>Absolutely.</strong> Confidentiality is paramount.
+                    We routinely sign standard bilateral mutual NDAs before
+                    diving into proprietary product specs, unreleased IP, or
+                    pre-launch brand strategy. You can request our standard NDA
+                    template or send your own.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="accordion-item custom-faq-item mb-3">
+                <h2 class="accordion-header" id="cfaqFour">
+                  <button
+                    class="accordion-button custom-faq-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cCollapseFour"
+                    aria-expanded="false"
+                    aria-controls="cCollapseFour"
+                  >
+                    <span class="faq-number">04</span>
+                    <span class="faq-question-text"
+                      >What is your typical project delivery timeline?</span
+                    >
+                    <span class="faq-icon-wrapper">
+                      <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="cCollapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="cfaqFour"
+                  data-bs-parent="#contactFaq"
+                >
+                  <div class="accordion-body custom-faq-body">
+                    Typical design sprint projects take
+                    <strong>3 to 5 weeks</strong>, while comprehensive digital
+                    transformations and bespoke 3D/WebGL platforms take
+                    <strong>8 to 14 weeks</strong>. We provide a guaranteed
+                    milestone roadmap with weekly sprint deliverables before
+                    kickoff.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="accordion-item custom-faq-item mb-3">
+                <h2 class="accordion-header" id="cfaqFive">
+                  <button
+                    class="accordion-button custom-faq-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#cCollapseFive"
+                    aria-expanded="false"
+                    aria-controls="cCollapseFive"
+                  >
+                    <span class="faq-number">05</span>
+                    <span class="faq-question-text"
+                      >Do you offer post-launch maintenance and continuous
+                      optimization?</span
+                    >
+                    <span class="faq-icon-wrapper">
+                      <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </span>
+                  </button>
+                </h2>
+                <div
+                  id="cCollapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="cfaqFive"
+                  data-bs-parent="#contactFaq"
+                >
+                  <div class="accordion-body custom-faq-body">
+                    Yes. We offer dedicated monthly retainers covering
+                    continuous UI/UX enhancements, Webflow/Shopify development,
+                    performance monitoring, SEO tuning, and high-priority
+                    technical support to ensure your digital products scale
+                    seamlessly.
                   </div>
                 </div>
               </div>
@@ -554,53 +953,137 @@
 
     <!-- SECTION 8: 3-STEP RESPONSE PROTOCOL GUARANTEE -->
     <section
-      class="bg-theme-secondary py-5"
-      style="padding-top: 90px !important; padding-bottom: 90px !important"
+      class="bg-theme-secondary py-5 position-relative overflow-hidden"
+      style="padding-top: 100px !important; padding-bottom: 100px !important"
     >
-      <div class="container">
+      <div class="container position-relative z-2">
         <div class="text-center mb-5">
           <span class="section-tag">Our Response Guarantee</span>
           <h2 class="section-title">What Happens After You Contact Us</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px">
+            A frictionless, transparent 3-stage onboarding framework engineered
+            for velocity and absolute clarity.
+          </p>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-4 protocol-steps-wrapper position-relative">
+          <!-- Step 1 -->
           <div class="col-lg-4">
-            <div class="creative-card text-center p-4">
-              <span class="card-step-num">01</span>
-              <h5 class="fw-bold mb-2">Prompt Review (24h)</h5>
-              <p class="text-muted small mb-0">
-                Our creative directors evaluate your brief, assess team
-                availability, and send an introductory response.
+            <div class="protocol-card h-100">
+              <div
+                class="protocol-card-top d-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="protocol-step-circle">
+                  <span>01</span>
+                </div>
+                <span class="protocol-guarantee-badge">
+                  <i class="fa-solid fa-bolt me-1"></i> &lt; 24h SLA
+                </span>
+              </div>
+              <div class="protocol-icon-badge mb-3">
+                <i class="fa-solid fa-clipboard-check"></i>
+              </div>
+              <h4 class="fw-bold mb-3 protocol-title">
+                Prompt Brief Evaluation
+              </h4>
+              <p class="text-muted mb-4 protocol-desc">
+                Our creative directors review your brief, assess technical
+                feasibility, and reply within 24 business hours with preliminary
+                insights.
               </p>
+              <div class="protocol-deliverable mt-auto pt-3 border-top">
+                <span
+                  class="small fw-semibold text-dark d-flex align-items-center gap-2"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-warning"
+                    style="color: var(--color-primary) !important"
+                  ></i>
+                  <span>Direct Creative Lead Assigned</span>
+                </span>
+              </div>
             </div>
           </div>
 
+          <!-- Step 2 -->
           <div class="col-lg-4">
-            <div class="creative-card text-center p-4">
-              <span class="card-step-num">02</span>
-              <h5 class="fw-bold mb-2">30-Min Discovery Call</h5>
-              <p class="text-muted small mb-0">
-                We dive deep into your project goals, technical requirements,
-                and strategic positioning opportunities.
+            <div class="protocol-card h-100">
+              <div
+                class="protocol-card-top d-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="protocol-step-circle">
+                  <span>02</span>
+                </div>
+                <span class="protocol-guarantee-badge">
+                  <i class="fa-solid fa-video me-1"></i> 30-Min Call
+                </span>
+              </div>
+              <div class="protocol-icon-badge mb-3">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <h4 class="fw-bold mb-3 protocol-title">
+                Strategic Discovery Session
+              </h4>
+              <p class="text-muted mb-4 protocol-desc">
+                We conduct an interactive video discovery session to align on
+                product vision, brand positioning, architecture, and timeline
+                parameters.
               </p>
+              <div class="protocol-deliverable mt-auto pt-3 border-top">
+                <span
+                  class="small fw-semibold text-dark d-flex align-items-center gap-2"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-warning"
+                    style="color: var(--color-primary) !important"
+                  ></i>
+                  <span>Aligned Project Scope & Architecture</span>
+                </span>
+              </div>
             </div>
           </div>
 
+          <!-- Step 3 -->
           <div class="col-lg-4">
-            <div class="creative-card text-center p-4">
-              <span class="card-step-num">03</span>
-              <h5 class="fw-bold mb-2">Custom Proposal & Roadmap</h5>
-              <p class="text-muted small mb-0">
-                You receive a transparent statement of work with exact
-                deliverables, timeline milestones, and fixed pricing.
+            <div class="protocol-card h-100">
+              <div
+                class="protocol-card-top d-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="protocol-step-circle">
+                  <span>03</span>
+                </div>
+                <span class="protocol-guarantee-badge">
+                  <i class="fa-solid fa-file-contract me-1"></i> Fixed Roadmap
+                </span>
+              </div>
+              <div class="protocol-icon-badge mb-3">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h4 class="fw-bold mb-3 protocol-title">
+                Custom Proposal & Roadmap
+              </h4>
+              <p class="text-muted mb-4 protocol-desc">
+                Receive a transparent statement of work complete with milestone
+                deadlines, precise deliverables, fixed pricing, and immediate
+                kickoff dates.
               </p>
+              <div class="protocol-deliverable mt-auto pt-3 border-top">
+                <span
+                  class="small fw-semibold text-dark d-flex align-items-center gap-2"
+                >
+                  <i
+                    class="fa-solid fa-circle-check text-warning"
+                    style="color: var(--color-primary) !important"
+                  ></i>
+                  <span>Fixed-Price Transparent Contract</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 9: INSTANT CHAT & DIRECT WHATSAPP CTA -->
     <section class="py-5 bg-white text-center">
       <div class="container py-3">
         <div
