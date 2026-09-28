@@ -590,20 +590,42 @@
               <span>Authenticating...</span>
             `;
 
+            const enteredEmail = emailInput.value.trim();
+            const selectedRole = roleSelect.value;
+            const roleName = roleSelect.options[roleSelect.selectedIndex].text;
+            const username = enteredEmail.split("@")[0] || "Studio Member";
+
+            const authUserData = {
+              email: enteredEmail,
+              role: selectedRole,
+              roleName: roleName,
+              username: username,
+              loginTime: new Date().toISOString(),
+            };
+
+            localStorage.setItem(
+              "stackly_auth_user",
+              JSON.stringify(authUserData),
+            );
+            sessionStorage.setItem(
+              "stackly_auth_user",
+              JSON.stringify(authUserData),
+            );
+
             setTimeout(() => {
               alertContainer.innerHTML = `
                 <div class="auth-alert-box success">
                   <i class="fa-solid fa-circle-check"></i>
                   <div>
                     <strong>Welcome Back!</strong>
-                    <div>Signed in successfully as ${escapeHtml(roleSelect.options[roleSelect.selectedIndex].text)}. Redirecting to studio homepage...</div>
+                    <div>Signed in successfully as ${escapeHtml(roleName)}. Redirecting to your Studio Dashboard...</div>
                   </div>
                 </div>
               `;
               setTimeout(() => {
-                window.location.href = "../index.html";
-              }, 1500);
-            }, 1000);
+                window.location.href = `dashboard.html?role=${encodeURIComponent(selectedRole)}&email=${encodeURIComponent(enteredEmail)}&user=${encodeURIComponent(username)}`;
+              }, 1200);
+            }, 800);
           }
         });
       });
