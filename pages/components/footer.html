@@ -172,7 +172,16 @@
           </div>
         </div>
         <h6 class="text-white mt-4 mb-2 fw-bold">Studio Dispatch</h6>
-        <form class="footer-newsletter-form">
+        <form
+          class="footer-newsletter-form"
+          onsubmit="
+            event.preventDefault();
+            const isPages =
+              window.location.pathname.includes('/pages/') ||
+              window.location.pathname.includes('\\pages\\');
+            window.location.href = isPages ? '404.html' : 'pages/404.html';
+          "
+        >
           <input
             type="email"
             class="footer-newsletter-input"

@@ -147,9 +147,7 @@
                 id="projectInquiryForm"
                 onsubmit="
                   event.preventDefault();
-                  alert(
-                    'Thank you for reaching out! We will review your inquiry and get back to you within 24 hours.',
-                  );
+                  window.location.href = '404.html';
                 "
               >
                 <!-- Step 1: Services Interested -->
@@ -265,8 +263,12 @@
                         ></span>
                         <input
                           type="text"
+                          id="contactName"
+                          name="name"
                           class="form-control-custom"
                           placeholder="Your Full Name *"
+                          maxlength="16"
+                          autocomplete="name"
                           required
                         />
                       </div>
@@ -278,8 +280,11 @@
                         ></span>
                         <input
                           type="email"
+                          id="contactEmail"
+                          name="email"
                           class="form-control-custom"
                           placeholder="Work Email Address *"
+                          autocomplete="email"
                           required
                         />
                       </div>
@@ -291,8 +296,14 @@
                         ></span>
                         <input
                           type="tel"
+                          id="contactPhone"
+                          name="phone"
                           class="form-control-custom"
-                          placeholder="Phone Number (Optional)"
+                          placeholder="Phone Number *"
+                          minlength="10"
+                          maxlength="10"
+                          autocomplete="tel"
+                          required
                         />
                       </div>
                     </div>
@@ -303,8 +314,12 @@
                         ></span>
                         <input
                           type="text"
+                          id="contactCompany"
+                          name="company"
                           class="form-control-custom"
-                          placeholder="Company / Organization Name"
+                          placeholder="Company / Organization Name *"
+                          autocomplete="organization"
+                          required
                         />
                       </div>
                     </div>
@@ -327,6 +342,7 @@
                           name="project_budget"
                           value="5k-10k"
                           class="budget-radio"
+                          required
                         />
                         <div class="budget-card-inner">
                           <div class="budget-card-icon">
@@ -349,6 +365,7 @@
                           value="10k-25k"
                           class="budget-radio"
                           checked
+                          required
                         />
                         <div class="budget-card-inner">
                           <span class="budget-popular-tag">Popular</span>
@@ -371,6 +388,7 @@
                           name="project_budget"
                           value="25k-50k"
                           class="budget-radio"
+                          required
                         />
                         <div class="budget-card-inner">
                           <div class="budget-card-icon">
@@ -392,6 +410,7 @@
                           name="project_budget"
                           value="50k+"
                           class="budget-radio"
+                          required
                         />
                         <div class="budget-card-inner">
                           <div class="budget-card-icon">
@@ -421,6 +440,8 @@
                       ><i class="fa-regular fa-message"></i
                     ></span>
                     <textarea
+                      id="contactMessage"
+                      name="message"
                       class="form-control-custom form-textarea-custom"
                       rows="5"
                       placeholder="Tell us about your brand challenge, target audience, preferred launch deadline, and any reference websites..."
