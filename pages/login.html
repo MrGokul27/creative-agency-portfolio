@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - Stackly Creative Agency</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
+
+    <!-- Google Fonts (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6.6.0 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Main & Auth Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+  </head>
+  <body>
+    <div class="auth-page-wrapper">
+      <!-- Ambient Glow Orbs -->
+      <div class="auth-ambient-orb auth-orb-1"></div>
+      <div class="auth-ambient-orb auth-orb-2"></div>
+      <div class="auth-ambient-orb auth-orb-3"></div>
+
+      <!-- Top Navigation Header -->
+      <nav class="auth-top-nav">
+        <a
+          href="../index.html"
+          class="auth-brand-logo"
+          title="Back to Stackly Home"
+        >
+          <img
+            src="../assets/images/logoStackly.webp"
+            alt="Stackly Creative Agency Logo"
+          />
+        </a>
+        <a href="../index.html" class="btn-back-home">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Home</span>
+        </a>
+      </nav>
+
+      <!-- Main Login Container Card -->
+      <div class="auth-main-container">
+        <div class="row g-0">
+          <!-- Left Column: Agency Brand Showcase -->
+          <div class="col-lg-5 d-none d-lg-flex">
+            <div class="auth-showcase-side w-100">
+              <div>
+                <span class="auth-badge-pill">Creative Studio Portal</span>
+                <h2 class="auth-showcase-title">
+                  Welcome to
+                  <span class="text-theme-primary">Stackly</span> Workspace
+                </h2>
+                <p class="auth-showcase-desc">
+                  Sign in to access your creative projects, design review
+                  boards, case study archives, and real-time agency
+                  collaboration.
+                </p>
+
+                <div class="auth-feature-list">
+                  <div class="auth-feature-item">
+                    <div class="auth-feature-icon">
+                      <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <span>Interactive project dashboard & asset library</span>
+                  </div>
+                  <div class="auth-feature-item">
+                    <div class="auth-feature-icon">
+                      <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <span>Role-based secure agency & client access</span>
+                  </div>
+                  <div class="auth-feature-item">
+                    <div class="auth-feature-icon">
+                      <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span>Direct feedback loops with design leads</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="auth-quote-box">
+                <p class="auth-quote-text">
+                  "Stackly completely redefined our digital presence. Working
+                  with their creative studio has elevated our brand recognition
+                  by 300%."
+                </p>
+                <div class="auth-quote-author">
+                  <img
+                    src="../assets/images/team/team-member-card-01.webp"
+                    alt="Creative Director"
+                    class="auth-quote-avatar"
+                  />
+                  <div>
+                    <h6 class="auth-quote-name">Sophia Montgomery</h6>
+                    <span class="auth-quote-role"
+                      >Chief Marketing Officer, NovaCorp</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Login Form -->
+          <div class="col-lg-7">
+            <div class="auth-form-side">
+              <!-- Registered Message Container (If redirected from registration) -->
+              <div id="authAlertContainer"></div>
+
+              <div class="auth-form-header">
+                <h1 class="auth-form-title">Account Sign In</h1>
+                <p class="auth-form-subtitle">
+                  Don't have an account yet?
+                  <a href="register.html">Create an Account</a>
+                </p>
+              </div>
+
+              <!-- Login Form -->
+              <form id="loginForm" novalidate>
+                <!-- 1. Role Selection (Required) -->
+                <div class="auth-form-group">
+                  <label for="loginRole" class="auth-label">
+                    <span
+                      >Select Account Role
+                      <span class="required-star">*</span></span
+                    >
+                  </label>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-solid fa-user-shield auth-input-icon"></i>
+                    <select
+                      id="loginRole"
+                      name="role"
+                      class="form-select auth-select"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Select your account role
+                      </option>
+                      <option value="client">Client / Brand Owner</option>
+                      <option value="designer">
+                        Creative Designer / UI-UX
+                      </option>
+                      <option value="developer">Developer / Engineer</option>
+                      <option value="manager">Project Manager</option>
+                      <option value="admin">Agency Administrator</option>
+                    </select>
+                  </div>
+                  <div class="field-feedback-msg error d-none" id="roleError">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>Please select your account role.</span>
+                  </div>
+                </div>
+
+                <!-- 2. Email Address (Required) -->
+                <div class="auth-form-group">
+                  <label for="loginEmail" class="auth-label">
+                    <span
+                      >Email Address <span class="required-star">*</span></span
+                    >
+                  </label>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-regular fa-envelope auth-input-icon"></i>
+                    <input
+                      type="email"
+                      id="loginEmail"
+                      name="email"
+                      class="form-control auth-input"
+                      placeholder="name@agency.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                  <div class="field-feedback-msg error d-none" id="emailError">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>Please enter a valid email address.</span>
+                  </div>
+                </div>
+
+                <!-- 3. Password Field with Weak Password Validation & Toggle (Required) -->
+                <div class="auth-form-group">
+                  <div class="auth-label">
+                    <span>Password <span class="required-star">*</span></span>
+                    <a href="#" class="auth-forgot-link">Forgot Password?</a>
+                  </div>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-solid fa-lock auth-input-icon"></i>
+                    <input
+                      type="password"
+                      id="loginPassword"
+                      name="password"
+                      class="form-control auth-input auth-input-password"
+                      placeholder="Enter your password"
+                      autocomplete="current-password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="auth-password-toggle"
+                      id="toggleLoginPassword"
+                      aria-label="Toggle password visibility"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                    </button>
+                  </div>
+
+                  <!-- Real-time Password Strength Feedback for Login -->
+                  <div
+                    class="password-strength-container d-none"
+                    id="passwordStrengthBox"
+                  >
+                    <div class="strength-header">
+                      <span class="strength-title">Password Strength:</span>
+                      <span class="strength-label" id="strengthLabel"
+                        >Too Weak</span
+                      >
+                    </div>
+                    <div class="strength-bar-track">
+                      <div class="strength-bar-fill" id="strengthBar"></div>
+                    </div>
+                    <ul class="strength-rules-list">
+                      <li class="strength-rule-item" id="ruleLength">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>At least 8 characters</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleUpper">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Uppercase letter (A-Z)</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleLower">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Lowercase letter (a-z)</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleNumber">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>At least 1 number (0-9)</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleSpecial">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Special character (!@#$)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="field-feedback-msg error d-none"
+                    id="passwordError"
+                  >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span id="passwordErrorText"
+                      >Password is required and cannot be weak.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- 4. Remember Me Checkbox (Required) -->
+                <div class="auth-check-wrapper">
+                  <input
+                    type="checkbox"
+                    id="loginRemember"
+                    name="remember"
+                    class="form-check-input auth-checkbox"
+                    required
+                  />
+                  <label for="loginRemember" class="auth-check-label">
+                    Remember me on this device
+                    <span class="required-star">*</span>
+                  </label>
+                </div>
+                <div
+                  class="field-feedback-msg error d-none mb-3"
+                  id="rememberError"
+                >
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <span>You must check 'Remember me' to continue.</span>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                  type="submit"
+                  class="btn-auth-submit"
+                  id="loginSubmitBtn"
+                >
+                  <span>Sign In To Dashboard</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </form>
+
+              <!-- Social Auth Alternative -->
+              <div class="auth-divider">
+                <span>Or sign in with</span>
+              </div>
+
+              <div class="auth-social-row">
+                <a href="#" class="btn-social-auth">
+                  <i class="fa-brands fa-google text-danger"></i>
+                  <span>Google Workspace</span>
+                </a>
+                <a href="#" class="btn-social-auth">
+                  <i class="fa-brands fa-github text-white"></i>
+                  <span>GitHub Studio</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Client Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("loginForm");
+        const roleSelect = document.getElementById("loginRole");
+        const emailInput = document.getElementById("loginEmail");
+        const passwordInput = document.getElementById("loginPassword");
+        const rememberCheck = document.getElementById("loginRemember");
+        const togglePasswordBtn = document.getElementById(
+          "toggleLoginPassword",
+        );
+
+        const roleError = document.getElementById("roleError");
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+        const passwordErrorText = document.getElementById("passwordErrorText");
+        const rememberError = document.getElementById("rememberError");
+        const alertContainer = document.getElementById("authAlertContainer");
+
+        const passwordStrengthBox = document.getElementById(
+          "passwordStrengthBox",
+        );
+        const strengthLabel = document.getElementById("strengthLabel");
+        const strengthBar = document.getElementById("strengthBar");
+
+        const ruleLength = document.getElementById("ruleLength");
+        const ruleUpper = document.getElementById("ruleUpper");
+        const ruleLower = document.getElementById("ruleLower");
+        const ruleNumber = document.getElementById("ruleNumber");
+        const ruleSpecial = document.getElementById("ruleSpecial");
+
+        // 1. Check if redirected from successful registration
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("registered") === "success") {
+          const registeredUser = urlParams.get("user") || "User";
+          alertContainer.innerHTML = `
+            <div class="auth-alert-box success">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Registration Successful!</strong>
+                <div>Welcome, ${escapeHtml(registeredUser)}! Your creative account has been created. Please sign in below.</div>
+              </div>
+            </div>
+          `;
+        }
+
+        function escapeHtml(str) {
+          return str.replace(
+            /[&<>"']/g,
+            (m) =>
+              ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+              })[m],
+          );
+        }
+
+        // 2. Toggle Password Visibility
+        togglePasswordBtn.addEventListener("click", () => {
+          const isPassword = passwordInput.type === "password";
+          passwordInput.type = isPassword ? "text" : "password";
+          togglePasswordBtn.innerHTML = isPassword
+            ? '<i class="fa-regular fa-eye-slash"></i>'
+            : '<i class="fa-regular fa-eye"></i>';
+        });
+
+        // 3. Password Strength Checker & Validation
+        function evaluatePasswordStrength(password) {
+          const checks = {
+            length: password.length >= 8,
+            upper: /[A-Z]/.test(password),
+            lower: /[a-z]/.test(password),
+            number: /[0-9]/.test(password),
+            special: /[^A-Za-z0-9]/.test(password),
+          };
+
+          let passedCount = 0;
+          if (checks.length) passedCount++;
+          if (checks.upper) passedCount++;
+          if (checks.lower) passedCount++;
+          if (checks.number) passedCount++;
+          if (checks.special) passedCount++;
+
+          return {
+            checks,
+            passedCount,
+            isStrongEnough: checks.length && passedCount >= 3,
+          };
+        }
+
+        function updateRuleUI(elem, isValid) {
+          if (isValid) {
+            elem.classList.remove("invalid");
+            elem.classList.add("valid");
+            elem.querySelector("i").className = "fa-solid fa-circle-check";
+          } else {
+            elem.classList.remove("valid");
+            elem.classList.add("invalid");
+            elem.querySelector("i").className = "fa-solid fa-circle-xmark";
+          }
+        }
+
+        passwordInput.addEventListener("focus", () => {
+          if (passwordInput.value.length > 0) {
+            passwordStrengthBox.classList.remove("d-none");
+          }
+        });
+
+        passwordInput.addEventListener("input", () => {
+          const val = passwordInput.value;
+          if (!val) {
+            passwordStrengthBox.classList.add("d-none");
+            passwordInput.classList.remove("is-valid", "is-invalid");
+            passwordError.classList.add("d-none");
+            return;
+          }
+
+          passwordStrengthBox.classList.remove("d-none");
+          const { checks, passedCount } = evaluatePasswordStrength(val);
+
+          updateRuleUI(ruleLength, checks.length);
+          updateRuleUI(ruleUpper, checks.upper);
+          updateRuleUI(ruleLower, checks.lower);
+          updateRuleUI(ruleNumber, checks.number);
+          updateRuleUI(ruleSpecial, checks.special);
+
+          // Bar & Label Updates
+          strengthBar.className = "strength-bar-fill";
+          strengthLabel.className = "strength-label";
+
+          if (passedCount <= 2 || !checks.length) {
+            strengthBar.classList.add("weak");
+            strengthLabel.classList.add("weak");
+            strengthLabel.textContent = "Weak Password";
+            passwordInput.classList.add("is-invalid");
+            passwordInput.classList.remove("is-valid");
+            passwordErrorText.textContent =
+              "Password is weak. Fulfill at least 8 characters with mixed letters, numbers & symbols.";
+            passwordError.classList.remove("d-none");
+          } else if (passedCount === 3) {
+            strengthBar.classList.add("fair");
+            strengthLabel.classList.add("fair");
+            strengthLabel.textContent = "Fair Password";
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          } else if (passedCount === 4) {
+            strengthBar.classList.add("good");
+            strengthLabel.classList.add("good");
+            strengthLabel.textContent = "Good Password";
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          } else {
+            strengthBar.classList.add("strong");
+            strengthLabel.classList.add("strong");
+            strengthLabel.textContent = "Strong Password";
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          }
+        });
+
+        // 4. Real-time Field Clearance on input
+        roleSelect.addEventListener("change", () => {
+          if (roleSelect.value) {
+            roleSelect.classList.remove("is-invalid");
+            roleSelect.classList.add("is-valid");
+            roleError.classList.add("d-none");
+          }
+        });
+
+        emailInput.addEventListener("input", () => {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (emailRegex.test(emailInput.value.trim())) {
+            emailInput.classList.remove("is-invalid");
+            emailInput.classList.add("is-valid");
+            emailError.classList.add("d-none");
+          }
+        });
+
+        rememberCheck.addEventListener("change", () => {
+          if (rememberCheck.checked) {
+            rememberCheck.classList.remove("is-invalid");
+            rememberError.classList.add("d-none");
+          }
+        });
+
+        // 5. Form Submission & Validation
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          let isValid = true;
+
+          // Role Validation
+          if (!roleSelect.value) {
+            roleSelect.classList.add("is-invalid");
+            roleError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            roleSelect.classList.remove("is-invalid");
+            roleSelect.classList.add("is-valid");
+            roleError.classList.add("d-none");
+          }
+
+          // Email Validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (
+            !emailInput.value.trim() ||
+            !emailRegex.test(emailInput.value.trim())
+          ) {
+            emailInput.classList.add("is-invalid");
+            emailError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            emailInput.classList.remove("is-invalid");
+            emailInput.classList.add("is-valid");
+            emailError.classList.add("d-none");
+          }
+
+          // Password Validation & Weak Password Check
+          const pwd = passwordInput.value;
+          const { checks, passedCount, isStrongEnough } =
+            evaluatePasswordStrength(pwd);
+
+          if (!pwd) {
+            passwordInput.classList.add("is-invalid");
+            passwordErrorText.textContent = "Password is required.";
+            passwordError.classList.remove("d-none");
+            isValid = false;
+          } else if (!isStrongEnough || passedCount < 3 || !checks.length) {
+            passwordInput.classList.add("is-invalid");
+            passwordStrengthBox.classList.remove("d-none");
+            passwordErrorText.textContent =
+              "Weak password! Minimum 8 characters with uppercase, numbers and symbols required.";
+            passwordError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          }
+
+          // Remember Me Validation (Required)
+          if (!rememberCheck.checked) {
+            rememberCheck.classList.add("is-invalid");
+            rememberError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            rememberCheck.classList.remove("is-invalid");
+            rememberError.classList.add("d-none");
+          }
+
+          if (isValid) {
+            const submitBtn = document.getElementById("loginSubmitBtn");
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+              <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+              <span>Authenticating...</span>
+            `;
+
+            setTimeout(() => {
+              alertContainer.innerHTML = `
+                <div class="auth-alert-box success">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <div>
+                    <strong>Welcome Back!</strong>
+                    <div>Signed in successfully as ${escapeHtml(roleSelect.options[roleSelect.selectedIndex].text)}. Redirecting to studio homepage...</div>
+                  </div>
+                </div>
+              `;
+              setTimeout(() => {
+                window.location.href = "../index.html";
+              }, 1500);
+            }, 1000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - Stackly Creative Agency</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/images/logoStackly.webp"
+    />
+
+    <!-- Google Fonts (Outfit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6.6.0 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Main & Auth Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/auth.css" />
+  </head>
+  <body>
+    <div class="auth-page-wrapper">
+      <!-- Ambient Glow Orbs -->
+      <div class="auth-ambient-orb auth-orb-1"></div>
+      <div class="auth-ambient-orb auth-orb-2"></div>
+      <div class="auth-ambient-orb auth-orb-3"></div>
+
+      <!-- Top Navigation Header -->
+      <nav class="auth-top-nav">
+        <a
+          href="../index.html"
+          class="auth-brand-logo"
+          title="Back to Stackly Home"
+        >
+          <img
+            src="../assets/images/logoStackly.webp"
+            alt="Stackly Creative Agency Logo"
+          />
+        </a>
+        <a href="../index.html" class="btn-back-home">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Home</span>
+        </a>
+      </nav>
+
+      <!-- Main Register Container Card -->
+      <div class="auth-main-container">
+        <div class="row g-0">
+          <!-- Left Column: Agency Brand Showcase -->
+          <div class="col-lg-5 d-none d-lg-flex">
+            <div class="auth-showcase-side w-100">
+              <div>
+                <span class="auth-badge-pill">Join Stackly Network</span>
+                <h2 class="auth-showcase-title">
+                  Build the <span class="text-theme-primary">Future</span> of
+                  Digital Design
+                </h2>
+                <p class="auth-showcase-desc">
+                  Join hundreds of top brands, creative directors, and visionary
+                  builders collaborating on world-class experiences.
+                </p>
+
+                <div class="auth-feature-list">
+                  <div class="auth-feature-item">
+                    <div class="auth-feature-icon">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <span>Access bespoke brand kits & UI design systems</span>
+                  </div>
+                  <div class="auth-feature-item">
+                    <div class="auth-feature-icon">
+                      <i class="fa-solid fa-code-commit"></i>
+                    </div>
+                    <span>Collaborative workspace for teams & agencies</span>
+                  </div>
+                  <div class="auth-feature-item">
+                    <div class="auth-feature-icon">
+                      <i class="fa-solid fa-award"></i>
+                    </div>
+                    <span>Dedicated creative director review sessions</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="auth-quote-box">
+                <p class="auth-quote-text">
+                  "Creating an agency account with Stackly gave our team
+                  unprecedented transparency and lightning-fast project
+                  delivery."
+                </p>
+                <div class="auth-quote-author">
+                  <img
+                    src="../assets/images/team/team-member-card-02.webp"
+                    alt="Creative Partner"
+                    class="auth-quote-avatar"
+                  />
+                  <div>
+                    <h6 class="auth-quote-name">Alexander Wright</h6>
+                    <span class="auth-quote-role"
+                      >Head of Product, Vantage Studio</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Register Form -->
+          <div class="col-lg-7">
+            <div class="auth-form-side">
+              <!-- Alert Box Container -->
+              <div id="authAlertContainer"></div>
+
+              <div class="auth-form-header">
+                <h1 class="auth-form-title">Create an Account</h1>
+                <p class="auth-form-subtitle">
+                  Already have an account?
+                  <a href="login.html">Sign In</a>
+                </p>
+              </div>
+
+              <!-- Register Form -->
+              <form id="registerForm" novalidate>
+                <!-- 1. Username (Required, Alphabetic Only - No Numbers, No Special Characters, No Spaces) -->
+                <div class="auth-form-group">
+                  <label for="registerUsername" class="auth-label">
+                    <span>Username <span class="required-star">*</span></span>
+                    <span class="username-restriction-badge">
+                      <i class="fa-solid fa-ban me-1"></i> Letters Only (No
+                      numbers/spaces/symbols)
+                    </span>
+                  </label>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-regular fa-user auth-input-icon"></i>
+                    <input
+                      type="text"
+                      id="registerUsername"
+                      name="username"
+                      class="form-control auth-input"
+                      placeholder="e.g. JohnDoe"
+                      autocomplete="off"
+                      maxlength="16"
+                      pattern="[A-Za-z]+"
+                      required
+                    />
+                  </div>
+                  <div
+                    class="field-feedback-msg error d-none"
+                    id="usernameError"
+                  >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span id="usernameErrorText"
+                      >Username is required and must contain letters only.</span
+                    >
+                  </div>
+                  <div class="field-feedback-msg info" id="usernameHint">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span
+                      >Only letters allowed (A-Z, a-z). Numbers, spaces, and
+                      symbols are strictly blocked.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- 2. Role (Required) -->
+                <div class="auth-form-group">
+                  <label for="registerRole" class="auth-label">
+                    <span
+                      >Account Role <span class="required-star">*</span></span
+                    >
+                  </label>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-solid fa-user-tag auth-input-icon"></i>
+                    <select
+                      id="registerRole"
+                      name="role"
+                      class="form-select auth-select"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Choose your primary role
+                      </option>
+                      <option value="client">Client / Brand Owner</option>
+                      <option value="designer">
+                        Creative Designer / UI-UX
+                      </option>
+                      <option value="developer">Developer / Engineer</option>
+                      <option value="manager">Project / Brand Manager</option>
+                      <option value="partner">
+                        Agency Partner / Freelancer
+                      </option>
+                    </select>
+                  </div>
+                  <div class="field-feedback-msg error d-none" id="roleError">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>Please choose your primary role.</span>
+                  </div>
+                </div>
+
+                <!-- 3. Email (Required) -->
+                <div class="auth-form-group">
+                  <label for="registerEmail" class="auth-label">
+                    <span
+                      >Email Address <span class="required-star">*</span></span
+                    >
+                  </label>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-regular fa-envelope auth-input-icon"></i>
+                    <input
+                      type="email"
+                      id="registerEmail"
+                      name="email"
+                      class="form-control auth-input"
+                      placeholder="name@company.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                  <div class="field-feedback-msg error d-none" id="emailError">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>Please enter a valid email address.</span>
+                  </div>
+                </div>
+
+                <!-- 4. Password Field with Weak Password Validation (Required) -->
+                <div class="auth-form-group">
+                  <label for="registerPassword" class="auth-label">
+                    <span
+                      >Create Password
+                      <span class="required-star">*</span></span
+                    >
+                  </label>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-solid fa-lock auth-input-icon"></i>
+                    <input
+                      type="password"
+                      id="registerPassword"
+                      name="password"
+                      class="form-control auth-input auth-input-password"
+                      placeholder="Create a strong password"
+                      autocomplete="new-password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="auth-password-toggle"
+                      id="toggleRegisterPassword"
+                      aria-label="Toggle password visibility"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                    </button>
+                  </div>
+
+                  <!-- Real-time Password Strength Meter -->
+                  <div
+                    class="password-strength-container"
+                    id="passwordStrengthBox"
+                  >
+                    <div class="strength-header">
+                      <span class="strength-title">Password Strength:</span>
+                      <span class="strength-label" id="strengthLabel"
+                        >Too Weak</span
+                      >
+                    </div>
+                    <div class="strength-bar-track">
+                      <div class="strength-bar-fill" id="strengthBar"></div>
+                    </div>
+                    <ul class="strength-rules-list">
+                      <li class="strength-rule-item" id="ruleLength">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>At least 8 characters</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleUpper">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Uppercase letter (A-Z)</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleLower">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Lowercase letter (a-z)</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleNumber">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>At least 1 number (0-9)</span>
+                      </li>
+                      <li class="strength-rule-item" id="ruleSpecial">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Special character (!@#$)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="field-feedback-msg error d-none"
+                    id="passwordError"
+                  >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span id="passwordErrorText"
+                      >Password is required and cannot be weak.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- 5. Confirm Password Field with Matching Validation (Required) -->
+                <div class="auth-form-group">
+                  <label for="registerConfirmPassword" class="auth-label">
+                    <span
+                      >Confirm Password
+                      <span class="required-star">*</span></span
+                    >
+                  </label>
+                  <div class="auth-input-wrapper">
+                    <i class="fa-solid fa-shield-halved auth-input-icon"></i>
+                    <input
+                      type="password"
+                      id="registerConfirmPassword"
+                      name="confirmPassword"
+                      class="form-control auth-input auth-input-password"
+                      placeholder="Re-enter password to match"
+                      autocomplete="new-password"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="auth-password-toggle"
+                      id="toggleConfirmPassword"
+                      aria-label="Toggle confirm password visibility"
+                    >
+                      <i class="fa-regular fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="field-feedback-msg d-none" id="matchFeedback">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span id="matchFeedbackText">Passwords match.</span>
+                  </div>
+                </div>
+
+                <!-- 6. Terms & Conditions (Required) -->
+                <div class="auth-check-wrapper">
+                  <input
+                    type="checkbox"
+                    id="registerTerms"
+                    name="terms"
+                    class="form-check-input auth-checkbox"
+                    required
+                  />
+                  <label for="registerTerms" class="auth-check-label">
+                    I agree to the
+                    <a
+                      href="#"
+                      class="auth-terms-link"
+                      onclick="
+                        event.preventDefault();
+                        alert(
+                          'Stackly Creative Agency Terms & Conditions: By creating an account, you agree to our digital service policies, confidentiality agreements, and creative project terms.',
+                        );
+                      "
+                      >Terms & Conditions</a
+                    >
+                    and
+                    <a
+                      href="#"
+                      class="auth-terms-link"
+                      onclick="
+                        event.preventDefault();
+                        alert(
+                          'Stackly Creative Agency Privacy Policy: Your data and project assets are securely stored with enterprise encryption.',
+                        );
+                      "
+                      >Privacy Policy</a
+                    >
+                    <span class="required-star">*</span>
+                  </label>
+                </div>
+                <div
+                  class="field-feedback-msg error d-none mb-3"
+                  id="termsError"
+                >
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                  <span
+                    >You must agree to the Terms & Conditions to proceed.</span
+                  >
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                  type="submit"
+                  class="btn-auth-submit"
+                  id="registerSubmitBtn"
+                >
+                  <span>Create Account & Join</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </form>
+
+              <!-- Social Auth Alternative -->
+              <div class="auth-divider">
+                <span>Or register with</span>
+              </div>
+
+              <div class="auth-social-row">
+                <a href="#" class="btn-social-auth">
+                  <i class="fa-brands fa-google text-danger"></i>
+                  <span>Google Workspace</span>
+                </a>
+                <a href="#" class="btn-social-auth">
+                  <i class="fa-brands fa-github text-white"></i>
+                  <span>GitHub Studio</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Validation & Behavior Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("registerForm");
+        const usernameInput = document.getElementById("registerUsername");
+        const roleSelect = document.getElementById("registerRole");
+        const emailInput = document.getElementById("registerEmail");
+        const passwordInput = document.getElementById("registerPassword");
+        const confirmPasswordInput = document.getElementById(
+          "registerConfirmPassword",
+        );
+        const termsCheck = document.getElementById("registerTerms");
+
+        const togglePasswordBtn = document.getElementById(
+          "toggleRegisterPassword",
+        );
+        const toggleConfirmBtn = document.getElementById(
+          "toggleConfirmPassword",
+        );
+
+        const usernameError = document.getElementById("usernameError");
+        const usernameErrorText = document.getElementById("usernameErrorText");
+        const roleError = document.getElementById("roleError");
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
+        const passwordErrorText = document.getElementById("passwordErrorText");
+        const matchFeedback = document.getElementById("matchFeedback");
+        const matchFeedbackText = document.getElementById("matchFeedbackText");
+        const termsError = document.getElementById("termsError");
+        const alertContainer = document.getElementById("authAlertContainer");
+
+        const strengthLabel = document.getElementById("strengthLabel");
+        const strengthBar = document.getElementById("strengthBar");
+        const ruleLength = document.getElementById("ruleLength");
+        const ruleUpper = document.getElementById("ruleUpper");
+        const ruleLower = document.getElementById("ruleLower");
+        const ruleNumber = document.getElementById("ruleNumber");
+        const ruleSpecial = document.getElementById("ruleSpecial");
+
+        // 1. REQUIREMENT 7: USERNAME RESTRICTION
+        // Prevent typing numbers, spaces, or special characters in the field itself.
+        usernameInput.addEventListener("keydown", (e) => {
+          // Allow system/navigation keys (Backspace, Tab, Enter, Arrows, Delete, Escape, Home, End)
+          const allowedKeys = [
+            "Backspace",
+            "Tab",
+            "Enter",
+            "Escape",
+            "ArrowLeft",
+            "ArrowRight",
+            "ArrowUp",
+            "ArrowDown",
+            "Delete",
+            "Home",
+            "End",
+          ];
+          if (allowedKeys.includes(e.key)) return;
+
+          // Allow keyboard shortcuts like Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+Z
+          if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+          // Block spaces explicitly
+          if (e.key === " " || e.code === "Space") {
+            e.preventDefault();
+            showUsernameError("Spaces are not allowed in the username.");
+            return;
+          }
+
+          // Check if key is a letter only (a-z, A-Z)
+          if (!/^[a-zA-Z]$/.test(e.key)) {
+            e.preventDefault();
+            showUsernameError(
+              "Numbers and special characters are not allowed. Use letters (A-Z) only.",
+            );
+          }
+        });
+
+        usernameInput.addEventListener("input", function () {
+          // Remove any non-alphabetic character immediately (handles autofill, mobile keyboards, etc.)
+          const sanitized = this.value.replace(/[^a-zA-Z]/g, "");
+          if (this.value !== sanitized) {
+            this.value = sanitized;
+            showUsernameError(
+              "Invalid characters removed. Only letters (A-Z) are allowed.",
+            );
+          } else if (this.value.trim().length > 0) {
+            this.classList.remove("is-invalid");
+            this.classList.add("is-valid");
+            usernameError.classList.add("d-none");
+          }
+        });
+
+        usernameInput.addEventListener("paste", function (e) {
+          e.preventDefault();
+          const pastedText = (e.clipboardData || window.clipboardData).getData(
+            "text",
+          );
+          const sanitized = pastedText.replace(/[^a-zA-Z]/g, "");
+          if (!sanitized) {
+            showUsernameError("Pasted text contains no valid letters.");
+            return;
+          }
+          // Insert sanitized text
+          const start = this.selectionStart;
+          const end = this.selectionEnd;
+          const currentVal = this.value;
+          this.value =
+            currentVal.substring(0, start) +
+            sanitized +
+            currentVal.substring(end);
+          this.selectionStart = this.selectionEnd = start + sanitized.length;
+
+          this.classList.remove("is-invalid");
+          this.classList.add("is-valid");
+          usernameError.classList.add("d-none");
+        });
+
+        function showUsernameError(msg) {
+          usernameErrorText.textContent = msg;
+          usernameError.classList.remove("d-none");
+          usernameInput.classList.add("is-invalid");
+          setTimeout(() => {
+            if (
+              usernameInput.value.trim().length > 0 &&
+              /^[a-zA-Z]+$/.test(usernameInput.value)
+            ) {
+              usernameError.classList.add("d-none");
+              usernameInput.classList.remove("is-invalid");
+              usernameInput.classList.add("is-valid");
+            }
+          }, 3000);
+        }
+
+        // 2. TOGGLE PASSWORD VISIBILITY
+        togglePasswordBtn.addEventListener("click", () => {
+          const isPassword = passwordInput.type === "password";
+          passwordInput.type = isPassword ? "text" : "password";
+          togglePasswordBtn.innerHTML = isPassword
+            ? '<i class="fa-regular fa-eye-slash"></i>'
+            : '<i class="fa-regular fa-eye"></i>';
+        });
+
+        toggleConfirmBtn.addEventListener("click", () => {
+          const isPassword = confirmPasswordInput.type === "password";
+          confirmPasswordInput.type = isPassword ? "text" : "password";
+          toggleConfirmBtn.innerHTML = isPassword
+            ? '<i class="fa-regular fa-eye-slash"></i>'
+            : '<i class="fa-regular fa-eye"></i>';
+        });
+
+        // 3. REQUIREMENT 6: WEAK PASSWORD VALIDATION
+        function evaluatePasswordStrength(password) {
+          const checks = {
+            length: password.length >= 8,
+            upper: /[A-Z]/.test(password),
+            lower: /[a-z]/.test(password),
+            number: /[0-9]/.test(password),
+            special: /[^A-Za-z0-9]/.test(password),
+          };
+
+          let passedCount = 0;
+          if (checks.length) passedCount++;
+          if (checks.upper) passedCount++;
+          if (checks.lower) passedCount++;
+          if (checks.number) passedCount++;
+          if (checks.special) passedCount++;
+
+          return {
+            checks,
+            passedCount,
+            isStrongEnough: checks.length && passedCount >= 3,
+          };
+        }
+
+        function updateRuleUI(elem, isValid) {
+          if (isValid) {
+            elem.classList.remove("invalid");
+            elem.classList.add("valid");
+            elem.querySelector("i").className = "fa-solid fa-circle-check";
+          } else {
+            elem.classList.remove("valid");
+            elem.classList.add("invalid");
+            elem.querySelector("i").className = "fa-solid fa-circle-xmark";
+          }
+        }
+
+        passwordInput.addEventListener("input", () => {
+          const val = passwordInput.value;
+          const { checks, passedCount } = evaluatePasswordStrength(val);
+
+          updateRuleUI(ruleLength, checks.length);
+          updateRuleUI(ruleUpper, checks.upper);
+          updateRuleUI(ruleLower, checks.lower);
+          updateRuleUI(ruleNumber, checks.number);
+          updateRuleUI(ruleSpecial, checks.special);
+
+          strengthBar.className = "strength-bar-fill";
+          strengthLabel.className = "strength-label";
+
+          if (val.length === 0) {
+            strengthLabel.textContent = "Too Weak";
+            passwordInput.classList.remove("is-valid", "is-invalid");
+            passwordError.classList.add("d-none");
+          } else if (passedCount <= 2 || !checks.length) {
+            strengthBar.classList.add("weak");
+            strengthLabel.classList.add("weak");
+            strengthLabel.textContent = "Weak Password";
+            passwordInput.classList.add("is-invalid");
+            passwordInput.classList.remove("is-valid");
+            passwordErrorText.textContent =
+              "Weak password! Meet minimum 8 characters with letters, numbers & symbols.";
+            passwordError.classList.remove("d-none");
+          } else if (passedCount === 3) {
+            strengthBar.classList.add("fair");
+            strengthLabel.classList.add("fair");
+            strengthLabel.textContent = "Fair Password";
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          } else if (passedCount === 4) {
+            strengthBar.classList.add("good");
+            strengthLabel.classList.add("good");
+            strengthLabel.textContent = "Good Password";
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          } else {
+            strengthBar.classList.add("strong");
+            strengthLabel.classList.add("strong");
+            strengthLabel.textContent = "Strong Password";
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          }
+
+          // Check confirm password matching as well if already typed
+          if (confirmPasswordInput.value.length > 0) {
+            checkPasswordMatch();
+          }
+        });
+
+        // 4. REQUIREMENT 5: CHECK WHETHER PASSWORD AND CONFIRM PASSWORD MATCH
+        function checkPasswordMatch() {
+          const pwd = passwordInput.value;
+          const confirmPwd = confirmPasswordInput.value;
+
+          if (!confirmPwd) {
+            confirmPasswordInput.classList.remove("is-valid", "is-invalid");
+            matchFeedback.classList.add("d-none");
+            return false;
+          }
+
+          if (pwd === confirmPwd) {
+            confirmPasswordInput.classList.remove("is-invalid");
+            confirmPasswordInput.classList.add("is-valid");
+            matchFeedback.className = "field-feedback-msg success";
+            matchFeedback.innerHTML =
+              '<i class="fa-solid fa-circle-check"></i> <span>Passwords match perfectly.</span>';
+            matchFeedback.classList.remove("d-none");
+            return true;
+          } else {
+            confirmPasswordInput.classList.remove("is-valid");
+            confirmPasswordInput.classList.add("is-invalid");
+            matchFeedback.className = "field-feedback-msg error";
+            matchFeedback.innerHTML =
+              '<i class="fa-solid fa-circle-xmark"></i> <span>Passwords do not match. Please verify.</span>';
+            matchFeedback.classList.remove("d-none");
+            return false;
+          }
+        }
+
+        confirmPasswordInput.addEventListener("input", checkPasswordMatch);
+
+        // 5. OTHER REAL-TIME FIELD HANDLERS
+        roleSelect.addEventListener("change", () => {
+          if (roleSelect.value) {
+            roleSelect.classList.remove("is-invalid");
+            roleSelect.classList.add("is-valid");
+            roleError.classList.add("d-none");
+          }
+        });
+
+        emailInput.addEventListener("input", () => {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (emailRegex.test(emailInput.value.trim())) {
+            emailInput.classList.remove("is-invalid");
+            emailInput.classList.add("is-valid");
+            emailError.classList.add("d-none");
+          }
+        });
+
+        termsCheck.addEventListener("change", () => {
+          if (termsCheck.checked) {
+            termsCheck.classList.remove("is-invalid");
+            termsError.classList.add("d-none");
+          }
+        });
+
+        // 6. FORM SUBMISSION & REDIRECT TO LOGIN (REQUIREMENTS 4, 5, 6, 7, 8)
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          let isValid = true;
+
+          // 1. Validate Username (Required, Alphabet only, no space/numbers/specials)
+          const usernameVal = usernameInput.value.trim();
+          if (!usernameVal) {
+            usernameInput.classList.add("is-invalid");
+            usernameErrorText.textContent = "Username is required.";
+            usernameError.classList.remove("d-none");
+            isValid = false;
+          } else if (!/^[a-zA-Z]+$/.test(usernameVal)) {
+            usernameInput.classList.add("is-invalid");
+            usernameErrorText.textContent =
+              "Username must contain letters only. No numbers, spaces, or symbols.";
+            usernameError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            usernameInput.classList.remove("is-invalid");
+            usernameInput.classList.add("is-valid");
+            usernameError.classList.add("d-none");
+          }
+
+          // 2. Validate Role (Required)
+          if (!roleSelect.value) {
+            roleSelect.classList.add("is-invalid");
+            roleError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            roleSelect.classList.remove("is-invalid");
+            roleSelect.classList.add("is-valid");
+            roleError.classList.add("d-none");
+          }
+
+          // 3. Validate Email (Required)
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (
+            !emailInput.value.trim() ||
+            !emailRegex.test(emailInput.value.trim())
+          ) {
+            emailInput.classList.add("is-invalid");
+            emailError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            emailInput.classList.remove("is-invalid");
+            emailInput.classList.add("is-valid");
+            emailError.classList.add("d-none");
+          }
+
+          // 4. Validate Password & Weak Password Check (Required, not weak)
+          const pwd = passwordInput.value;
+          const { checks, passedCount, isStrongEnough } =
+            evaluatePasswordStrength(pwd);
+
+          if (!pwd) {
+            passwordInput.classList.add("is-invalid");
+            passwordErrorText.textContent = "Password is required.";
+            passwordError.classList.remove("d-none");
+            isValid = false;
+          } else if (!isStrongEnough || passedCount < 3 || !checks.length) {
+            passwordInput.classList.add("is-invalid");
+            passwordErrorText.textContent =
+              "Weak password! Meet at least 8 characters with mixed uppercase, numbers and symbols.";
+            passwordError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+            passwordError.classList.add("d-none");
+          }
+
+          // 5. Validate Confirm Password Match (Required & Matching)
+          const matchResult = checkPasswordMatch();
+          if (!confirmPasswordInput.value) {
+            confirmPasswordInput.classList.add("is-invalid");
+            matchFeedback.className = "field-feedback-msg error";
+            matchFeedback.innerHTML =
+              '<i class="fa-solid fa-circle-xmark"></i> <span>Confirm Password is required.</span>';
+            matchFeedback.classList.remove("d-none");
+            isValid = false;
+          } else if (!matchResult) {
+            isValid = false;
+          }
+
+          // 6. Validate Terms & Conditions (Required)
+          if (!termsCheck.checked) {
+            termsCheck.classList.add("is-invalid");
+            termsError.classList.remove("d-none");
+            isValid = false;
+          } else {
+            termsCheck.classList.remove("is-invalid");
+            termsError.classList.add("d-none");
+          }
+
+          // REQUIREMENT 8: REDIRECT TO LOGIN AFTER SUBMIT
+          if (isValid) {
+            const submitBtn = document.getElementById("registerSubmitBtn");
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+              <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+              <span>Creating Account...</span>
+            `;
+
+            alertContainer.innerHTML = `
+              <div class="auth-alert-box success">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Account Created Successfully!</strong>
+                  <div>Redirecting you to the sign-in page...</div>
+                </div>
+              </div>
+            `;
+
+            setTimeout(() => {
+              // Redirect to login page with registered flag and username
+              window.location.href = `login.html?registered=success&user=${encodeURIComponent(usernameVal)}`;
+            }, 1200);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
