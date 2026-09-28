@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((res) => res.text())
         .then((html) => {
           headerPlaceholder.innerHTML = html;
+          normalizeComponentPaths(headerPlaceholder, isRoot);
         }),
     );
   }
@@ -26,12 +27,43 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((res) => res.text())
         .then((html) => {
           footerPlaceholder.innerHTML = html;
+          normalizeComponentPaths(footerPlaceholder, isRoot);
         }),
     );
   }
 
   Promise.all(loads).then(() => setupInteractiveFeatures());
 });
+
+function normalizeComponentPaths(container, isRoot) {
+  if (!container) return;
+  
+  // Normalize image paths
+  const imgs = container.querySelectorAll("img");
+  imgs.forEach((img) => {
+    const src = img.getAttribute("src");
+    if (src && src.startsWith("/assets/")) {
+      img.setAttribute("src", isRoot ? src.substring(1) : ".." + src);
+    }
+  });
+
+  // Normalize anchor links
+  const links = container.querySelectorAll("a");
+  links.forEach((a) => {
+    const href = a.getAttribute("href");
+    if (href) {
+      if (href === "/index.html" || href === "/") {
+        a.setAttribute("href", isRoot ? "index.html" : "../index.html");
+      } else if (href.startsWith("/pages/")) {
+        const pageName = href.replace("/pages/", "");
+        a.setAttribute("href", isRoot ? "pages/" + pageName : pageName);
+      } else if (href.startsWith("/assets/")) {
+        a.setAttribute("href", isRoot ? href.substring(1) : ".." + href);
+      }
+    }
+  });
+}
+
 
 function setupInteractiveFeatures() {
   // 1. STICKY HEADER
@@ -266,4 +298,55 @@ function setupInteractiveFeatures() {
       });
     });
   }
+
+  // 9. AUTOMATIC REDIRECTION FOR EMPTY & '#' LINKS TO 404 PAGE
+  setupEmptyLinksRedirection();
 }
+
+// Global click interceptor for empty and placeholder '#' links
+function setupEmptyLinksRedirection() {
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+
+    // Check if link is explicitly exempted (e.g. Bootstrap modal/collapse toggle)
+    if (
+      link.hasAttribute("data-bs-toggle") ||
+      link.hasAttribute("data-bs-target") ||
+      link.hasAttribute("data-no-404")
+    ) {
+      return;
+    }
+
+    const rawHref = link.getAttribute("href");
+
+    // Identify if the href is empty, '#', or standard placeholder
+    const isEmptyOrHash =
+      rawHref === null ||
+      rawHref === "" ||
+      rawHref === "#" ||
+      rawHref === "#!" ||
+      rawHref.trim() === "" ||
+      rawHref.trim() === "#" ||
+      rawHref.toLowerCase() === "javascript:void(0)" ||
+      rawHref.toLowerCase() === "javascript:void(0);" ||
+      rawHref.toLowerCase() === "javascript:;";
+
+    if (isEmptyOrHash) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isInsidePagesDir =
+        window.location.pathname.includes("/pages/") ||
+        window.location.pathname.includes("\\pages\\");
+
+      const target404 = isInsidePagesDir ? "404.html" : "pages/404.html";
+      window.location.href = target404;
+    }
+  });
+}
+
+// Ensure redirection is registered immediately
+setupEmptyLinksRedirection();
+
+
