@@ -250,6 +250,16 @@ body.dashboard-body {
   cursor: pointer;
   border: 1px solid transparent;
   user-select: none;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.dash-nav-link > span:not(.nav-badge) {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .dash-nav-link i {
@@ -268,6 +278,8 @@ body.dashboard-body {
   border-radius: var(--dash-radius-pill);
   background: rgba(255, 255, 255, 0.08);
   color: var(--dash-text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .dash-nav-link:hover {

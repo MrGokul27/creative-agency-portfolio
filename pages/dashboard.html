@@ -123,11 +123,15 @@
               <i class="fa-solid fa-bars-staggered"></i>
             </button>
             <div class="dash-search-box">
+              <label for="dashboardSearchInput" class="visually-hidden"
+                >Search dashboard</label
+              >
               <i class="fa-solid fa-magnifying-glass dash-search-icon"></i>
               <input
                 type="text"
                 class="dash-search-input"
                 id="dashboardSearchInput"
+                name="dashboard_search"
                 placeholder="Search projects, assets, tickets, invoices..."
               />
               <span class="dash-search-kbd">Ctrl K</span>
@@ -207,63 +211,9 @@
 
             <!-- Notifications Dropdown -->
             <div class="dropdown">
-              <button
-                class="dash-action-icon-btn dropdown-toggle"
-                type="button"
-                id="notifDropdown"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                aria-label="Notifications"
-              >
+              <button class="dash-action-icon-btn" type="button">
                 <i class="fa-regular fa-bell"></i>
               </button>
-              <ul
-                class="dropdown-menu dropdown-menu-dark-theme dropdown-menu-end dash-notif-menu"
-                aria-labelledby="notifDropdown"
-              >
-                <li
-                  class="dropdown-header d-flex justify-content-between align-items-center"
-                >
-                  <span>Studio Notifications</span>
-                  <span class="badge bg-warning text-dark">3 New</span>
-                </li>
-                <li>
-                  <a class="dropdown-item py-2" href="#">
-                    <div>
-                      <div class="fw-bold text-white small">
-                        Design Sprint Approved
-                      </div>
-                      <div class="text-muted" style="font-size: 0.75rem">
-                        NovaCorp 3D Brand Guide approved by Art Director.
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item py-2" href="#">
-                    <div>
-                      <div class="fw-bold text-white small">
-                        Deployment Complete
-                      </div>
-                      <div class="text-muted" style="font-size: 0.75rem">
-                        Velox EV production build v2.8.4 is now live.
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item py-2" href="#">
-                    <div>
-                      <div class="fw-bold text-white small">
-                        New Invoice Generated
-                      </div>
-                      <div class="text-muted" style="font-size: 0.75rem">
-                        Monthly creative retainer #INV-2026-09 paid.
-                      </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
             </div>
 
             <!-- User Profile Avatar Chip -->
@@ -281,11 +231,7 @@
                 >
                   Alex Rivera
                 </div>
-                <div
-                  class="text-muted"
-                  style="font-size: 0.72rem"
-                  id="topbarRoleText"
-                >
+                <div style="font-size: 0.72rem" id="topbarRoleText">
                   Agency Administrator
                 </div>
               </div>
@@ -1010,12 +956,21 @@
                     </p>
                   </div>
                   <div class="input-group">
+                    <label for="studioMessageInput" class="visually-hidden"
+                      >Type a message to the studio team</label
+                    >
                     <input
                       type="text"
+                      id="studioMessageInput"
+                      name="studio_message"
                       class="form-control auth-input"
                       placeholder="Type a message to the studio team..."
                     />
-                    <button class="btn-dash-primary">
+                    <button
+                      type="button"
+                      class="btn-dash-primary"
+                      aria-label="Send message"
+                    >
                       <i class="fa-solid fa-paper-plane"></i> Send
                     </button>
                   </div>

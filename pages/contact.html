@@ -152,12 +152,12 @@
               >
                 <!-- Step 1: Services Interested -->
                 <div class="mb-5 form-section-group">
-                  <label
+                  <div
                     class="form-step-heading mb-3 d-flex align-items-center gap-2"
                   >
                     <span class="step-badge">1</span>
                     <span>Which services are you interested in?</span>
-                  </label>
+                  </div>
                   <div class="service-tags-wrapper">
                     <div class="service-pill-item">
                       <input
@@ -249,15 +249,18 @@
 
                 <!-- Step 2: Contact Info -->
                 <div class="mb-5 form-section-group">
-                  <label
+                  <div
                     class="form-step-heading mb-3 d-flex align-items-center gap-2"
                   >
                     <span class="step-badge">2</span>
                     <span>Your Contact Information</span>
-                  </label>
+                  </div>
                   <div class="row g-4">
                     <div class="col-md-6">
                       <div class="form-floating-custom">
+                        <label for="contactName" class="visually-hidden"
+                          >Your Full Name</label
+                        >
                         <span class="input-icon"
                           ><i class="fa-regular fa-user"></i
                         ></span>
@@ -275,6 +278,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating-custom">
+                        <label for="contactEmail" class="visually-hidden"
+                          >Work Email Address</label
+                        >
                         <span class="input-icon"
                           ><i class="fa-regular fa-envelope"></i
                         ></span>
@@ -291,6 +297,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating-custom">
+                        <label for="contactPhone" class="visually-hidden"
+                          >Phone Number</label
+                        >
                         <span class="input-icon"
                           ><i class="fa-solid fa-phone"></i
                         ></span>
@@ -309,6 +318,9 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating-custom">
+                        <label for="contactCompany" class="visually-hidden"
+                          >Company / Organization Name</label
+                        >
                         <span class="input-icon"
                           ><i class="fa-regular fa-building"></i
                         ></span>
@@ -328,17 +340,18 @@
 
                 <!-- Step 3: Interactive Budget Selector -->
                 <div class="mb-5 form-section-group">
-                  <label
+                  <div
                     class="form-step-heading mb-3 d-flex align-items-center gap-2"
                   >
                     <span class="step-badge">3</span>
                     <span>Estimated Project Budget (USD)</span>
-                  </label>
+                  </div>
                   <div class="budget-grid-selector row g-3">
                     <div class="col-sm-6 col-lg-3">
-                      <label class="budget-card-option">
+                      <label class="budget-card-option" for="budget_5k_10k">
                         <input
                           type="radio"
+                          id="budget_5k_10k"
                           name="project_budget"
                           value="5k-10k"
                           class="budget-radio"
@@ -358,9 +371,10 @@
                     </div>
 
                     <div class="col-sm-6 col-lg-3">
-                      <label class="budget-card-option">
+                      <label class="budget-card-option" for="budget_10k_25k">
                         <input
                           type="radio"
+                          id="budget_10k_25k"
                           name="project_budget"
                           value="10k-25k"
                           class="budget-radio"
@@ -382,9 +396,10 @@
                     </div>
 
                     <div class="col-sm-6 col-lg-3">
-                      <label class="budget-card-option">
+                      <label class="budget-card-option" for="budget_25k_50k">
                         <input
                           type="radio"
+                          id="budget_25k_50k"
                           name="project_budget"
                           value="25k-50k"
                           class="budget-radio"
@@ -404,9 +419,10 @@
                     </div>
 
                     <div class="col-sm-6 col-lg-3">
-                      <label class="budget-card-option">
+                      <label class="budget-card-option" for="budget_50k_plus">
                         <input
                           type="radio"
+                          id="budget_50k_plus"
                           name="project_budget"
                           value="50k+"
                           class="budget-radio"
@@ -429,13 +445,16 @@
 
                 <!-- Step 4: Message -->
                 <div class="mb-5 form-section-group">
-                  <label
+                  <div
                     class="form-step-heading mb-3 d-flex align-items-center gap-2"
                   >
                     <span class="step-badge">4</span>
                     <span>Project Overview & Goals *</span>
-                  </label>
+                  </div>
                   <div class="form-floating-custom">
+                    <label for="contactMessage" class="visually-hidden"
+                      >Project Overview & Goals</label
+                    >
                     <span class="input-icon textarea-icon"
                       ><i class="fa-regular fa-message"></i
                     ></span>

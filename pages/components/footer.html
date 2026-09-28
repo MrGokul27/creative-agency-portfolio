@@ -182,10 +182,16 @@
             window.location.href = isPages ? '404.html' : 'pages/404.html';
           "
         >
+          <label for="footerNewsletterEmail" class="visually-hidden">
+            Enter your work email
+          </label>
           <input
             type="email"
+            id="footerNewsletterEmail"
+            name="footer_newsletter_email"
             class="footer-newsletter-input"
             placeholder="Enter your work email"
+            autocomplete="email"
             required
           />
           <button
