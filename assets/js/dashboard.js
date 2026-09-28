@@ -416,21 +416,51 @@ document.addEventListener("DOMContentLoaded", () => {
   function openMobileSidebar() {
     if (dashSidebar) dashSidebar.classList.add("open");
     if (sidebarBackdrop) sidebarBackdrop.classList.add("show");
+    document.body.classList.add("sidebar-open");
     document.body.style.overflow = "hidden";
   }
 
   function closeMobileSidebar() {
     if (dashSidebar) dashSidebar.classList.remove("open");
     if (sidebarBackdrop) sidebarBackdrop.classList.remove("show");
+    document.body.classList.remove("sidebar-open");
     document.body.style.overflow = "";
   }
 
   if (sidebarToggleBtn)
-    sidebarToggleBtn.addEventListener("click", openMobileSidebar);
+    sidebarToggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openMobileSidebar();
+    });
   if (sidebarCloseBtn)
-    sidebarCloseBtn.addEventListener("click", closeMobileSidebar);
+    sidebarCloseBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeMobileSidebar();
+    });
   if (sidebarBackdrop)
     sidebarBackdrop.addEventListener("click", closeMobileSidebar);
+
+  // Close sidebar on Escape key
+  document.addEventListener("keydown", (e) => {
+    if (
+      e.key === "Escape" &&
+      dashSidebar &&
+      dashSidebar.classList.contains("open")
+    ) {
+      closeMobileSidebar();
+    }
+  });
+
+  // Auto-reset when screen is resized to desktop
+  window.addEventListener("resize", () => {
+    if (
+      window.innerWidth > 991.98 &&
+      dashSidebar &&
+      dashSidebar.classList.contains("open")
+    ) {
+      closeMobileSidebar();
+    }
+  });
 
   // 8. Logout Handling
   const logoutButtons = document.querySelectorAll(
@@ -474,82 +504,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 10. Intercept Empty Links, # and Generic Buttons to Redirect to 404 Page (Requirement 7)
+  // 10. Intercept Empty Links, # and Action Buttons to Redirect to 404 Page
   function setupDashboard404Interception() {
     document.addEventListener("click", (e) => {
       // 1. Check if an anchor tag was clicked
       const link = e.target.closest("a");
       if (link) {
-        // Excluded interactive elements
+        // Allowed functional links
         if (
           link.hasAttribute("data-sidebar-view") ||
           link.classList.contains("role-switcher-item") ||
-          link.hasAttribute("data-bs-toggle") ||
-          link.hasAttribute("data-bs-target") ||
-          link.hasAttribute("data-action") ||
+          link.hasAttribute("data-role") ||
           link.id === "logoutBtn" ||
-          link.getAttribute("href") === "login.html" ||
+          link.getAttribute("data-action") === "logout" ||
+          link.classList.contains("dash-brand-logo") ||
           link.getAttribute("href") === "../index.html" ||
+          link.getAttribute("href") === "login.html" ||
           link.getAttribute("href") === "404.html" ||
           link.getAttribute("href") === "../pages/404.html"
         ) {
           return;
         }
 
-        const href = link.getAttribute("href");
-        const isEmptyOrHash =
-          href === null ||
-          href === "" ||
-          href === "#" ||
-          href === "#!" ||
-          href.trim() === "" ||
-          href.trim() === "#" ||
-          href.toLowerCase().startsWith("javascript:void");
-
-        if (isEmptyOrHash) {
-          e.preventDefault();
-          e.stopPropagation();
-          window.location.href = "404.html";
-          return;
-        }
+        // All other links redirect to 404
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = "404.html";
+        return;
       }
 
-      // 2. Check if an unhandled action button was clicked
+      // 2. Check if a button was clicked
       const button = e.target.closest("button");
       if (button) {
-        // Exclude handled buttons
+        // Allowed functional dashboard buttons (sidebar toggle, sidebar close, logout, role switcher)
         if (
           button.id === "sidebarToggleBtn" ||
           button.id === "sidebarCloseBtn" ||
-          button.id === "logoutBtn" ||
-          button.hasAttribute("data-action") ||
-          button.hasAttribute("data-bs-toggle") ||
-          button.hasAttribute("data-bs-dismiss") ||
           button.classList.contains("dash-sidebar-close") ||
-          button.classList.contains("dash-role-switcher-btn") ||
-          button.closest(".dropdown") ||
-          button.type === "submit"
+          button.id === "logoutBtn" ||
+          button.getAttribute("data-action") === "logout" ||
+          button.id === "roleSelectDropdown" ||
+          button.classList.contains("dash-role-switcher-btn")
         ) {
           return;
         }
 
-        // Unhandled placeholder buttons trigger 404
-        if (
-          button.classList.contains("btn-placeholder-action") ||
-          button.getAttribute("onclick") === null
-        ) {
-          // If it's a dummy table action button or export button without explicit JS logic
-          if (
-            button.closest(".dash-table") ||
-            button.classList.contains("btn-dash-primary") ||
-            button.classList.contains("btn-dash-outline") ||
-            button.classList.contains("btn-dash-icon")
-          ) {
-            e.preventDefault();
-            e.stopPropagation();
-            window.location.href = "404.html";
-          }
-        }
+        // All other buttons redirect to 404 page
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = "404.html";
+        return;
       }
     });
   }
