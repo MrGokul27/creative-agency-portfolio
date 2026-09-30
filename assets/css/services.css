@@ -20,7 +20,13 @@
   position: relative;
   overflow: hidden;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   transition: var(--transition-smooth);
+}
+
+.service-pillar-card p.text-muted {
+  flex: 1;
 }
 
 .service-pillar-card::after {

@@ -460,21 +460,21 @@ function setupContactFormValidation() {
       if (controlKeys.includes(e.key)) return;
       if (e.ctrlKey || e.metaKey || e.altKey) return;
 
-      if (e.key.length === 1 && !/^[a-zA-Z\s]$/.test(e.key)) {
+      if (e.key.length === 1 && !/^[a-zA-Z]$/.test(e.key)) {
         e.preventDefault();
       }
     });
 
     // Handle beforeinput for virtual keyboards & IME
     nameInput.addEventListener("beforeinput", (e) => {
-      if (e.data && !/^[a-zA-Z\s]+$/.test(e.data)) {
+      if (e.data && !/^[a-zA-Z]+$/.test(e.data)) {
         e.preventDefault();
       }
     });
 
     // Immediate sanitization on input
     nameInput.addEventListener("input", function () {
-      const sanitized = this.value.replace(/[^a-zA-Z\s]/g, "");
+      const sanitized = this.value.replace(/[^a-zA-Z]/g, "");
       if (this.value !== sanitized) {
         this.value = sanitized;
       }
@@ -484,7 +484,7 @@ function setupContactFormValidation() {
     nameInput.addEventListener("paste", function (e) {
       e.preventDefault();
       const pasted = (e.clipboardData || window.clipboardData).getData("text");
-      const sanitized = pasted.replace(/[^a-zA-Z\s]/g, "");
+      const sanitized = pasted.replace(/[^a-zA-Z]/g, "");
       const start = this.selectionStart;
       const end = this.selectionEnd;
       const val = this.value;
